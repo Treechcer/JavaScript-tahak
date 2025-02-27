@@ -2,7 +2,7 @@
 
 ## Úvod
 
-Toto je textové vysvětlení programovacího jazyka JavaScript, často zkracovaný jenom na JS. JS je primárně určen na webovové stránky a webové aplikace.
+Toto je textové vysvětlení programovacího jazyka JavaScript, často zkracovaný jen na JS. JS je primárně určen na webové stránky a webové aplikace.
 
 # Základy
 
@@ -12,13 +12,13 @@ Toto je textové vysvětlení programovacího jazyka JavaScript, často zkracova
 console.log("Ahoj Světe!");
 ```
 
-Tento příkaz (funkce / metoda ale k nim později) vypíše do konzole prohlížeče „Ahoj Světe!“ - bez těch uvozovek. To protože příkaz "console.log()" vypíše všechno v uvozovkách. 
+Tento příkaz (funkce / metoda ale k nim později) vypíše do konzole prohlížeče „Ahoj Světe!“ - bez těch uvozovek. To proto, že příkaz "console.log()" vypíše všechno v uvozovkách. 
 
-**pozn. každý příkaz v JS by měl mít na konci řádku ; ale nemusí, výjimky později*
+**pozn. každý příkaz v JS by měl mít na konci řádku středník (;) ale nemusí, výjimky později*
 
 ## Komentáře
 
-Komentář je část v kódu, která může obsahovat cokoliv, jak slova tak i části kódu. Komentáře slouží napsaní poznámky pro ostatní nebo sebe v budoucnosti, také je lze použít k odstraněné kódu kde je chyba aby se nespustil. 
+Komentář je část v kódu, která může obsahovat cokoli, jak slova, tak i části kódu. Komentáře slouží k napsaní poznámky pro ostatní nebo pro sebe v budoucnosti, také je lze použít k dočasnému odstranění kódu, kde je chyba, aby se nespustil 
 
 Komentáře se píšou takto:
 ```js
@@ -27,11 +27,11 @@ Komentáře se píšou takto:
 /*
 toto je
 komentář na
-více čádků
+více řádků
 */
 ```
 
-**pozn. více řádkové komentáře začínají /\* a končí \*/*
+**pozn. více řádkové komentáře začínají `\*` a končí `*/`*
 
 ## Proměnné
 
@@ -42,18 +42,18 @@ var slovo = "Ahoj Světe!"; // text (string)
 var pravda = true; // boolean
 ```
 
-V JS je hodně datových typů, např. celé číslo (int), číslo s desetinnou čárkou (float), znaky (string) a boolova hodnota (hodnota obsahující pouze pravdu **true** nebo nepravdu **false**). Všechny tyto hodnoty nemusí být nějak speciálně vyznačené až na string, text má vždy uvozovky, je jedno jaké (", ', \` ) dokud je stejnými ukončím, text může obsahovat jak znaky (A,b,C,d,e,f..) tak i čísla (0,1,2..) a lze provádět s nimi aritmetické operace pokud obsahují pouze čísla protože se automaticky převedou na čísla. Každá proměnná v JS se vytváří (deklaruje) se slovem "var", "let" nebo "const". Rozdíl mezi var a let není pro začátečníky důležitý ale oboje založí proměnnou, která se dá použít a je automaticky (dynamicky) daný datový typ. Const je konstata, také se automaticky (dynamicky) vybere datový typ, konstatny nelze měnit, po založení nejde upravit, předělat apod.
+V JS je mnoho datových typů, např. celé číslo (int), číslo s desetinnou čárkou (float), znaky (string) a logická hodnota (boolean neboli hodnota obsahující pouze pravdu `true` nebo nepravdu `false`). Všechny tyto hodnoty nemusí být nijak speciálně označeny, až na string, text má vždy uvozovky, je jedno jaké (`"`, `'` a \` ) dokud je stejnými ukončím, text může obsahovat jak znaky (A,b,C,d,e,f..) tak i čísla (0,1,2..) a lze provádět s nimi aritmetické operace pokud obsahují pouze čísla protože se automaticky převedou na čísla (int nebo float, podle potřeby). Každá proměnná v JS se vytváří (deklaruje) se slovem `var`, `let` nebo `const`. Rozdíl mezi var a let není pro začátečníky důležitý ale oboje založí proměnnou, která se dá použít a je automaticky (dynamicky) daný datový typ, proměnné se můžou i v jejich životech změnit datový typ, může začít např. jako string a pak být int. `Const` je konstata, také se automaticky (dynamicky) vybere datový typ, konstatny nelze měnit, po založení nejde upravit, předělat apod.
 
-**pozn.0 JS obsahuje více datových typů ale ostatní nejsou v tuto chvíli důležité*
+**pozn. JS obsahuje více datových typů ale ostatní nejsou v tuto chvíli důležité*
 
-**pozn.1 \` (alt gr + ý / alt gr + 7) má i speciální vlastnosti není úplně stejný jako ostatní ale nemělo by prohození uvozovek z \` na " nebo naopak rozbít kód*
+**pozn.0 \` (alt gr + ý / alt gr + 7) má i speciální vlastnosti není úplně stejný jako ostatní ale nemělo by prohození uvozovek z \` na " nebo naopak rozbít kód*
 
 **pozn.1 boolenovy hodnoty je název pro hodnoty nabývající 1 nebo 0 nebo můžou také být dané (což je častější v programování) jako true nebo false*
 
 
 ## Aritmetické operace
 
-Aritmetické operace lze používat s čísli ale stejné znaky (operátory) můžou dělat i jiné věci než jen aritmetické operace ale to v další kapitole.
+Aritmetické operace lze používat s čísly ale stejné znaky (operátory) mohou dělat i jiné věci než jen aritmetické operace – to ale probereme v další kapitole.
 
 ```js
 var x = 5 + 10; // x = 15
@@ -61,40 +61,45 @@ var y = 7;
 var z = x + y; // 22
 var t = 5 * 2; // 10
 var u = 10 / 2; // 5
-var mocnina = 2 ** 3; // 8
-var odmocnina = 4 ** 0.5; // 2
+var mocnina = 2 ** 3; // 8, 2^3
+var mocnina2 = 3 ** 2; // 9, 3^2
+var odmocnina = 4 ** 0.5; // 2, 4^0.5
 var modulo = 10 % 3; // 1
 ```
 
-\+ plus
+`+` plus
 
-\- mínus
+`-` mínus
 
-\* násobení
+`*` násobení
 
-\/ dělení
+`/` dělení
 
-\** mocnina a odmocnina (podle druhého čísla)
+`**` mocnina a odmocnina (podle druhého čísla)
 
-\% zbytek po dělení (modulo)
+`%` zbytek po dělení (modulo)
 
 ### Speciální využití arimetický operátorů
+
+Plus (+) lze použít i na spojení (concatinade) stringů
 
 ```js
 var str1 = "Ahoj ";
 var str2 = "Světe!";
 console.log(str1 + str2); // výstup:Ahoj Světe!
+
+var str3 = "Ahoj";
+var str4 = "Světe!";
+console.log(str3 + str4); // výstup:AhojSvěte!
 ```
 
-Plus (+) lze použít i na spojení (concatinade) stringů
+Dvě plus (++) před nebo za proměnnou obsahující čísla ji inkrementuje, podle pozice je chvíle kdy se to stane.
 
 ```js
 var x = 1;
 x++;
 ++x;
 ```
-
-Dvě plus (++) před nebo za proměnnou obsahující čísla ji inkrementuje, podle pozice je chvíle kdy se to stane.
 
 **Vysvětlení:*
 ```js
@@ -115,21 +120,21 @@ Tady lze vidět rozdíl a to ten kdy se proměnná (v tomto případě x) zvět�
 
 **pozn. to stejné funguje s mínusem (x--, --x)*
 
-++ inkrementace
+`++` inkrementace
 
--- dekrementace
+`--` dekrementace
 
 ## Další zápis inkrementace 
 
 ```js
 var x = 1;
-x++; // 2
-x += 1; // 3 .. x = x + 1
+//x++ == x += 1
+x += 1; // 2 .. x = x + 1
 ```
 
 Kombinovaný zápis (+=) je možné využít na inkrementaci o jakékoliv číslo.
 
-**pozn. kombinovaný zápis má i varianty: -=, *=, /=. Vždy to je jako: "x = x + n" kdy n je jakékoliv číslo, tento zápis platí pro všechny operace jen s tím že se oeprace mění.*
+**pozn. kombinovaný zápis má i varianty: `-=`, `*=`, `/=`. Vždy to je jako `x = x + n` kdy n je jakékoliv číslo, tento zápis platí pro všechny operace jen s tím že se operace mění.*
 
 # Větvení
 
@@ -149,25 +154,27 @@ else{
 
 Tady je jednoduché schéma jak zapisovat větvení.
 
+**pozn. `if` a `else if` se spustí vždy když jejich podmínka je pravdivá a spustí se vždycky ten první pravdivý, `else` se spustí pokud žádný jiný nebyl pravdivý*
+
 ## Podmínky
 
 Podmínky obsahují porovnávání, lze použít tyto v JS:
 
-== - rovnost s převodem datového typu (vysvětlení později) 
+`==` - rovnost s převodem datového typu (vysvětlení později) 
 
-=== - rovnost bez převodu datového typu 
+`===` - rovnost bez převodu datového typu 
 
-!= - nerovnost s převodu datového typu 
+`!=` - nerovnost s převodu datového typu 
 
-!== - nerovnost bet převodu datového typu 
+`!==` - nerovnost bez převodu datového typu 
 
-\>= - levá strana je větší nebo rovna pravé straně 
+`>=` - levá strana je větší nebo rovna pravé straně 
 
-\> - pravá strana je větší levé straně (když obě budou stejné výsledek je false) 
+`>` - pravá strana je větší levé straně (když obě budou stejné výsledek je false) 
 
-\<= - levá strana je větší nebo rovna jak pravá 
+`<=` - levá strana je větší nebo rovna jak pravá 
 
-\< - levá strana je větší jak pravá 
+`<` - levá strana je větší jak pravá 
 
 
 **pozn. jedno rovná se (=) je znak pro přiřazení ne pro porovnávání a v podmínce vyvolá chybu.*
@@ -176,15 +183,15 @@ Podmínky obsahují porovnávání, lze použít tyto v JS:
 **vysvětlení:*
 
 ```js
-console.log(5 == "5") // vypíše true
-cosnole.log(5 === "5") // vypíše false
+console.log(5 == "5") // vypíše true protože to převede "5" na 5 a 5 a 5 je to stejné
+cosnole.log(5 === "5") // vypíše false protože to nepřevede "5" na 5 a "5" a 5 není to stejné
 ```
 
 **pozn. lze vypsat výsledek podmíněk, vždy výsledek je boolenská hodnota a proto jenom true nebo false*
 
 ### Kombinace podmínek
 
-Podmínky kombinovat pomocí && (alt gr + c) a || (alt gr + w). && je logická funkce AND (a), která je pravda pokud oba jsou vstupy jsou pravda. || je logická funkce OR (nebo), která funguje když je aspoň jedna pravda. 
+Podmínky můžeme kombinovat pomocí && (alt gr + c) a || (alt gr + w). && je logická funkce AND (a), která je pravda pokud oba jsou vstupy jsou pravda. || je logická funkce OR (nebo), která funguje když je aspoň jedna pravda ale i když oboje jsou pravda. 
 
 
 ### Pravdivostní tabulka AND:
@@ -203,10 +210,9 @@ Y = A * B
 
 0 = false
 
+**pozn. logická funkce AND se také nazývá loigický součin*
 
 ### Pravdivostní tabulka OR:
-
-
 
 OR
 | A   | B   | Y   |
@@ -217,6 +223,8 @@ OR
 | 1   | 1   | 1   |
 
 Y = A + B
+
+**pozn. logická funkce OR se také nazývá loigický součet*
 
 V JS kódu v podmínkách se používá:
 ```js
@@ -235,7 +243,10 @@ if (true || false){ // vždy bude pravda protože 1 + 0 = 1 (pravda), lze tam ta
 
 **pozn.0 použití jednoho znaku (&, |) je zcela něco jiného, dvě znamenají logický AND / OR ale jedno znamená bitový AND / OR*
 
-**vysvětlení pozn.0*
+## Binární součet (OR) a binární součin (AND)
+
+BInární součet (|) a binární součin (&) a jak fungují.
+
 ```js
 let a = 10;  // 1010 (binárně)
 let b = 8;   // 1000 (binárně)
@@ -250,12 +261,20 @@ let vysledek = a & b;
 
 vysledek bude 8
 */
+let vysledek2 = a | b;
+/*
+1010
+1000
+----
+1010
+výsledek 2 je 10
+*/
 
 ```
 
 ## Funkce
 
-S funkcemi jsme se setkali už na začátku s funkcí "console.log()" (pro upřesnění, console.log() je metoda ale s jejím využít je jako funkce). Funkce je část kódu, která se dá znovu zavolat pomocí jejího jména a pokud přijímá nějaké parametry tak s parametry. Funkce dokud nebudu zavolaná nic neudělá, bude jenom "přehlédnuta počítačem" dokud ji nezavoláme.
+S funkcemi jsme se setkali už na začátku s funkcí "console.log()" (pro upřesnění, console.log() je metoda ale s jejím využít je jako funkce). Funkce je část kódu, která se dá znovu zavolat pomocí jejího jména a pokud přijímá nějaké parametry tak název s parametry. Funkce dokud nebude zavolaná nic neudělá, bude jenom "přehlédnuta počítačem" dokud ji nezavoláme.
 
 ```js
 function nazev(){ //vytvoření funkce bez parametrů
@@ -274,6 +293,7 @@ function nazev3(param){ // funkce s názvem "nazev3" co přijímá jeden paramet
 nazev() // zavolaní funkce nazev bez parametrů
 nazev2(parametr, paramentr0, .. ,parametrN) // zavolaní funkce nazev2 s parametry
 nazev3(5) // vrátí 6
+console.log(nazev3(1)) // vypíše 2
 
 var x = 4;
 nazev3(x) //vrátí 5
@@ -284,9 +304,10 @@ nazev3(x) //vrátí 5
 
 ## Rozsah
 
-Rozsah je lokální (lze použít proměnnou pouze v té funkci) a globální (lze proměnnou použít všude) nebo se také dá rozlišit jako blokový (proměnná je pouze použitelná v bloku založení) a funkční (proměnná je pouze použitelná ve funkci založení). Tady jde vidět rozdíl mezi var a let, var je založení proměnné v rozsahu na funkci přičemž lez je v rozsahu pro kód bloku.
+Rozsah je lokální (lze použít proměnnou pouze v té funkci) a globální (lze proměnnou použít všude) nebo se také dá rozlišit jako blokový (proměnná je pouze použitelná v bloku založení) a funkční (proměnná je pouze použitelná ve funkci založení). Tady jde vidět rozdíl mezi var a let, var je založení proměnné v rozsahu na funkci přičemž let je v rozsahu pro kód bloku.
 
 **pozn. kód bloku začíná vždy s { a končí vždy s }*
+
 **pozn.0 const má stejný rozsah jako let*
 
 ```js
@@ -308,3 +329,118 @@ tVar();
 tLet();
 ```
 
+## Cykly
+
+### Cyklus s určitým počtem opakování (for)
+
+Cyklus s určitým počkem opakování je `for`. 
+
+```js
+for (let i = 1; i <= 10; i++){
+    console.log(i) // vypíše to čísla od 1 do 10
+}
+
+for (let i = 1; i < 10; i++){
+    console.log(i) // vypíše to čísla od 1 do 9
+}
+
+for (let i = 10; i >= 1; i--){
+    console.log(i) // vypíše to čísla od 10 do 1
+}
+```
+
+**vysvětlení zápisu: první věc v závorce (např. `let i = 0;`) je část kódu co se spustí přesně jednou a to na začátku před cyklem a proměnnou založí (deklaruje) proměnnou `i` (nebo jinou proměnnou), která se bude rovnat tím za rovná se, tady by to byla `0`, druhá je podmínka (např. `i < 10;`), která se vyhodnocuje po každé iteraci (opakování) dokud výsledek není false, až je tak to skončí a třetí část (např `i++`) se vyhodnocuje po každé zkontrování podmínky, nejčastěji tam je nějaká inkrementace.
+
+**pozn. jedno z nejčastějších využití pro počítání indexu u polí / seznamů (v JS seznamů v jiných jazicích to můžou být správně pole ale v konverzaci je to celkem jedno a není úplně chab říct oboje nebo opak).*
+
+### Cyklus s neurčeným počtem opakování (while)
+
+Cyklus s neurčeným počtem opakování (`while`) se vyhodnocuje po každé interace (projití cyklu) a dokud je pravda (true) tak do té doby jede dále, s false končí. 
+
+**pozn. cyklus s neurčitým počtem opakováním je často nazývám také cyklus s podmínkou před každým opakováním*
+
+**pozn.0 lze udělat nekonečný cyklus, těm se snažíme vždy vyhnout*
+
+```js
+let i = 0
+while (i < 10){
+    console.log(i)
+    i++
+}
+
+// zde je cyklus, který vypíše čísla od 0 do 9
+```
+
+**pozn.1 všechny `for` cykly se dají řepsat na `while` cykly ale ne všechny `while` jdou na `for`* 
+
+### Cyklus s podmínkou po každém opakování (do ... while)
+
+Tento cyklus (`do ... while`) se vždy spustí aspoň jednou a po prvním projití (iteraci) se zkontroluje podmínka a bude se opakovat dokud je podmínka true až je false přestane.
+
+```js
+var i = 0
+do{
+    console.log(i)
+    i++
+} while (i < 10)
+
+// vypíše 0 až 9
+
+var j = 10
+
+do{
+    console.log(j)
+    j++
+} while (j < -5)
+
+//vypíše to 10 a cyklus skončí
+```
+
+### Cyklus na procházení vlastností objektu (for ... in)
+
+K OOP (objektově orientované programování) a objektům se dostaneme později ale kdyby jsme chtěli vypsat vlastnosti a jejich hodnoty od nějakého objektu jedna z možností je využít Cyklus na procházení vlastností objektu (`for ... in`) cyklus.
+
+```js
+var obj = {jmeno: "Petr", vek: 25}
+for (let keyValues in obj){
+    console.log(keyValues, obj[keyValues])
+}
+
+/* výstup tohoto je název vlastnosti (jmeno, vek..) a jejich vlastnost v tomto objektu, takže výstup je:
+jmeno Petr
+vek 25
+*/
+```
+
+**pozn. není důležité ještě chápat objekty a OOP protože to je pokročilejší v programování než to co jsme doposud se učili*
+
+### cyklus pro procházení hodnot v iterovatelných objektech (for ... of)
+
+Tento cyklus může procházet iterovatelné objekty (to jsou objekty jako stringy (text), seznamy apod.), tento cyklus je určen pro procházení převážně seznamů.
+
+**pozn. seznamy budou vysvětla v další kapitole*
+
+**pozn.0 seznamy a pole jsou skoro to stejné v kontextu JS je možné je prohodit, takže někde bude napsané pole a někde seznam ale je to to stejné*
+
+```js
+var seznam = [1, 2, 3, 4, 5];
+for (let index of seznam) {
+  console.log(index);
+} // vypíše (každá hodnota bude na novém řádku): 1 2 3 4 5 
+```
+
+## Seznamy
+
+Seznam je datový typ proměnné, který umožňuje uložit více dat do jedné proměnné, proměnné nemusí mít ani stejný datový typ, takže tam může být string, int apod. Seznamy jsou indexované, první index je 0 a poslední je `n-1`, přičemž n je počet prvků v seznamu
+
+```js
+var seznam = [0,5,7,"Ahoj",["seznam", "pole"], 0.54]
+console.log(seznam[0]) // 0
+console.log(seznam[2]) // 7
+
+// když chceme vypsat prvek z pole, které je v poli uděláme to takto:
+
+console.log(seznam[4][0]) // vypíše "seznam" z seznamu co je na indexu 4
+```
+
+**pozn. není omezení na počet seznamů v seznamech ale není doporučené využít více než 3, protože pak je to složité to využívat*
