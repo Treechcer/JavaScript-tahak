@@ -12,7 +12,7 @@ Toto je textové vysvětlení programovacího jazyka JavaScript, často zkracova
 console.log("Ahoj Světe!");
 ```
 
-Tento příkaz (funkce ale k nim později) vypíše do konzole prohlížeče „Ahoj Světe!“ - bez těch uvozovek. To protože příkaz "console.log()" vypíše všechno v uvozovkách. 
+Tento příkaz (funkce / metoda ale k nim později) vypíše do konzole prohlížeče „Ahoj Světe!“ - bez těch uvozovek. To protože příkaz "console.log()" vypíše všechno v uvozovkách. 
 
 **pozn. každý příkaz v JS by měl mít na konci řádku ; ale nemusí, výjimky později*
 
@@ -31,7 +31,7 @@ více čádků
 */
 ```
 
-**pozn. více řádkové komentáře začínají /\* a konří \*/*
+**pozn. více řádkové komentáře začínají /\* a končí \*/*
 
 ## Proměnné
 
@@ -42,7 +42,7 @@ var slovo = "Ahoj Světe!"; // text (string)
 var pravda = true; // boolean
 ```
 
-V JS je hodně datových typů, např. celé číslo (int), číslo s desetinnou čárkou (float), znaky (string) a boolova hodnota (hodnota obsahující pouze pravdu **true** nebo nepravdu **false**). Všechny tyto hodnoty nemusí být nějak speciálně vyznačené až na string, text má vždy uvozovky, je jedno jaké (", ', \` ) dokud je stejnými ukončím, text může obsahovat jak znaky (A,b,C,d,e,f..) tak i čísla (0,1,2..) a lze provádět s nimi aritmetické operace pokud obsahují pouze čísla protože se automaticky převedou na čísla. 
+V JS je hodně datových typů, např. celé číslo (int), číslo s desetinnou čárkou (float), znaky (string) a boolova hodnota (hodnota obsahující pouze pravdu **true** nebo nepravdu **false**). Všechny tyto hodnoty nemusí být nějak speciálně vyznačené až na string, text má vždy uvozovky, je jedno jaké (", ', \` ) dokud je stejnými ukončím, text může obsahovat jak znaky (A,b,C,d,e,f..) tak i čísla (0,1,2..) a lze provádět s nimi aritmetické operace pokud obsahují pouze čísla protože se automaticky převedou na čísla. Každá proměnná v JS se vytváří (deklaruje) se slovem "var", "let" nebo "const". Rozdíl mezi var a let není pro začátečníky důležitý ale oboje založí proměnnou, která se dá použít a je automaticky (dynamicky) daný datový typ. Const je konstata, také se automaticky (dynamicky) vybere datový typ, konstatny nelze měnit, po založení nejde upravit, předělat apod.
 
 **pozn.0 JS obsahuje více datových typů ale ostatní nejsou v tuto chvíli důležité*
 
@@ -232,3 +232,79 @@ if (true || false){ // vždy bude pravda protože 1 + 0 = 1 (pravda), lze tam ta
 ```
 
 **pozn. lze kombinovat && a || i v jednom výrazu*
+
+**pozn.0 použití jednoho znaku (&, |) je zcela něco jiného, dvě znamenají logický AND / OR ale jedno znamená bitový AND / OR*
+
+**vysvětlení pozn.0*
+```js
+let a = 10;  // 1010 (binárně)
+let b = 8;   // 1000 (binárně)
+
+let vysledek = a & b;
+
+/*
+1010
+1000
+----
+1000
+
+vysledek bude 8
+*/
+
+```
+
+## Funkce
+
+S funkcemi jsme se setkali už na začátku s funkcí "console.log()" (pro upřesnění, console.log() je metoda ale s jejím využít je jako funkce). Funkce je část kódu, která se dá znovu zavolat pomocí jejího jména a pokud přijímá nějaké parametry tak s parametry. Funkce dokud nebudu zavolaná nic neudělá, bude jenom "přehlédnuta počítačem" dokud ji nezavoláme.
+
+```js
+function nazev(){ //vytvoření funkce bez parametrů
+
+}
+
+function nazev2(parametr, paramentr0, .. ,parametrN){ //vytvoření funkce s parametry, může jich tam být kolik chcememe, 1 až N
+
+}
+
+function nazev3(param){ // funkce s názvem "nazev3" co přijímá jeden parametr
+    param++; 
+    return param //return je určen k vracení proměnných zpátky, nusí tam být pokud chceme proměnné zase použít protože kvůli rozsahu proměnné, k rozsahu v další kapitole
+}
+
+nazev() // zavolaní funkce nazev bez parametrů
+nazev2(parametr, paramentr0, .. ,parametrN) // zavolaní funkce nazev2 s parametry
+nazev3(5) // vrátí 6
+
+var x = 4;
+nazev3(x) //vrátí 5
+
+```
+
+**pozn. nelze opakovat jména funkcí, jméno je možné mít pouze jedno*
+
+## Rozsah
+
+Rozsah je lokální (lze použít proměnnou pouze v té funkci) a globální (lze proměnnou použít všude) nebo se také dá rozlišit jako blokový (proměnná je pouze použitelná v bloku založení) a funkční (proměnná je pouze použitelná ve funkci založení). Tady jde vidět rozdíl mezi var a let, var je založení proměnné v rozsahu na funkci přičemž lez je v rozsahu pro kód bloku.
+
+**pozn. kód bloku začíná vždy s { a končí vždy s }*
+**pozn.0 const má stejný rozsah jako let*
+
+```js
+function tVar() {
+    if (true) {
+        var x = 10;
+    }
+    console.log(x); // funguje protože x je v rozshu na funkci
+}
+
+function tLet() {
+    if (true) {
+        let y = 20;
+    }
+    console.log(y);  // nefunguje protože y je v rozshu na kód bloku založení
+}
+
+tVar();
+tLet();
+```
+
