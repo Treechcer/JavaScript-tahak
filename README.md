@@ -440,7 +440,7 @@ console.log(seznam[2]) // 7
 
 // když chceme vypsat prvek z pole, které je v poli uděláme to takto:
 
-console.log(seznam[4][0]) // vypíše "seznam" z seznamu co je na indexu 4
+console.log(seznam[4][0]) // vypíše string "seznam" z seznamu co je na indexu 4
 ```
 
 **pozn. není omezení na počet seznamů v seznamech ale není doporučené využít více než 3, protože pak je to složité to využívat*
