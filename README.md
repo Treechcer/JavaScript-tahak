@@ -226,6 +226,25 @@ Y = A + B
 
 **pozn. logická funkce OR se také nazývá loigický součet*
 
+Booleanské hodnoty lze i negovat, negace je když změní jednu hodnotu na druho (true na false a naopak). 
+
+Not (!)
+| A   | Y   |
+| --- | --- |
+| 0   | 1   |
+| 1   | 0   |
+
+```js
+if (true){ // vždy bude pravda a vejde do větvení
+    console.log("pravda");
+}
+
+if (!true){ // nikdy nebude pravda a nikdy to nevejde do větvení protože true se vždy neguje na false
+    consol.elog("pravda");
+}
+
+```
+
 V JS kódu v podmínkách se používá:
 ```js
 //AND
