@@ -184,7 +184,7 @@ Podmínky obsahují porovnávání, lze použít tyto v JS:
 
 ```js
 console.log(5 == "5") // vypíše true protože to převede "5" na 5 a 5 a 5 je to stejné
-cosnole.log(5 === "5") // vypíše false protože to nepřevede "5" na 5 a "5" a 5 není to stejné
+console.log(5 === "5") // vypíše false protože to nepřevede "5" na 5 a "5" a 5 není to stejné
 ```
 
 **pozn. lze vypsat výsledek podmíněk, vždy výsledek je boolenská hodnota a proto jenom true nebo false*
@@ -235,7 +235,7 @@ if(true && false){ // vždy to bude lež protože 1 * 0 = 0 (false), lze tam dá
 
 //OR
 if (true || false){ // vždy bude pravda protože 1 + 0 = 1 (pravda), lze tam také dát i porovnávaní jako u AND
-
+    neco2()
 }
 ```
 
