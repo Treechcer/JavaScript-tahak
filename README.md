@@ -226,6 +226,23 @@ Y = A + B
 
 **pozn. logická funkce OR se také nazývá loigický součet*
 
+V JS kódu v podmínkách se používá:
+```js
+//AND
+if(true && false){ // vždy to bude lež protože 1 * 0 = 0 (false), lze tam dát i porovnávání, např. "x < 3 && y > 7"
+    neco()
+}
+
+//OR
+if (true || false){ // vždy bude pravda protože 1 + 0 = 1 (pravda), lze tam také dát i porovnávaní jako u AND
+
+}
+```
+
+**pozn. lze kombinovat && a || i v jednom výrazu*
+
+**pozn.0 použití jednoho znaku (&, |) je zcela něco jiného, dvě znamenají logický AND / OR ale jedno znamená bitový AND / OR*
+
 Booleanské hodnoty lze i negovat, negace je když změní jednu hodnotu na druho (true na false a naopak). 
 
 Not (!)
@@ -244,23 +261,6 @@ if (!true){ // nikdy nebude pravda a nikdy to nevejde do větvení protože true
 }
 
 ```
-
-V JS kódu v podmínkách se používá:
-```js
-//AND
-if(true && false){ // vždy to bude lež protože 1 * 0 = 0 (false), lze tam dát i porovnávání, např. "x < 3 && y > 7"
-    neco()
-}
-
-//OR
-if (true || false){ // vždy bude pravda protože 1 + 0 = 1 (pravda), lze tam také dát i porovnávaní jako u AND
-
-}
-```
-
-**pozn. lze kombinovat && a || i v jednom výrazu*
-
-**pozn.0 použití jednoho znaku (&, |) je zcela něco jiného, dvě znamenají logický AND / OR ale jedno znamená bitový AND / OR*
 
 ## Binární součet (OR) a binární součin (AND)
 
