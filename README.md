@@ -2,9 +2,25 @@
 
 ## Obsah
 
-- [Úvod](Úvod)
-- [Základy](Základy)
- - [Výpis do konzole](Výpis do konzole)
+- [Úvod](#úvod)
+- [Základy](#základy)
+  - [Výpis do konzole](#výpis-do-konzole)
+  - [Komentáře](#komentáře)
+  - [Proměnné](#proměnné)
+  - [Aritmetické operace](#aritmetické-operace)
+  - [Speciální využití aritmetických operátorů](#speciální-využití-aritmetických-operátorů)
+  - [Inkrementace a dekrementace](#inkrementace-a-dekrementace)
+  - [Kombinované zápisy operátorů](#kombinované-zápisy-operátorů)
+- [Větvení](#větvení)
+  - [Podmínky](#podmínky)
+  - [Kombinace podmínek](#kombinace-podmínek)
+  - [Pravdivostní tabulka](#pravdivostní-tabulka)
+  - [Logické operátory](#logické-operátory)
+- [Funkce](#funkce)
+- [Rozsah](#rozsah)
+- [Cykly](#cykly)
+  - [Cyklus `for`](#cyklus-for)
+  - [Cyklus `while`](#cyklus-while)
 
 ## Úvod
 
