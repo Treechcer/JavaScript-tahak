@@ -313,6 +313,7 @@ nazev() // zavolaní funkce nazev bez parametrů
 nazev2(parametr, paramentr0, .. ,parametrN) // zavolaní funkce nazev2 s parametry
 nazev3(5) // vrátí 6
 console.log(nazev3(1)) // vypíše 2
+let vracenaHodnota = nazev3(10); // proměnná vracenaHodnota bude obsahovat 11 protože vrácena hodnota pomocí return se uloží do ní 
 
 var x = 4;
 nazev3(x) //vrátí 5
