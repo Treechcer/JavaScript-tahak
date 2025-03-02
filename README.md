@@ -1,5 +1,9 @@
 # Tahák na JavaScript
 
+## Obsah
+
+- [Úvod](Úvod)
+
 ## Úvod
 
 Toto je textové vysvětlení programovacího jazyka JavaScript, často zkracovaný jen na JS. JS je primárně určen na webové stránky a webové aplikace.
