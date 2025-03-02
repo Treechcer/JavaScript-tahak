@@ -497,3 +497,53 @@ console.log(seznam[4][0]) // vypíše string "seznam" z seznamu co je na indexu 
 ```
 
 **pozn. není omezení na počet seznamů v seznamech ale není doporučené využít více než 3, protože pak je to složité to využívat*
+
+# OOP (Objektově Orientované Programování)
+
+Objektově orientované programování (`OOP`) je programovací paradigma, které využívá `objekty`, `třídy`, `metody` apod. s objekty jsme se už setkali v dávnější kapitole o Cyklech s cyklem `for...in` ale to není všechno, každá proměnná v JS je objekt nějaké třídy, například celé číslo (INT) je objekt třídy `number`, to stejné i float (v JS `float` i `int` jsou objekt stejné třídy, k změně aby to bylo jako jiné třídy jsou funkce `parseInt()` a `parseFloat()`, což nezmění třídu ale dosáhne efektu podobného a to toho že to buď bude jako int nebo float po použití), string je zase objekt třídy `String`. Každá třídu může mít pod sebou i metody (např. třída `console` a její metoda `log`, která přijímá nějaký string, co má vytisknout). V JS jsou dva hlavní způsoby jak si udělat objekt, jeden je pomocí `třídy` a `konstruktorů` a druhá je pomocí `deklarování` (založení) proměnné, která obsahuje nějaké `vlastnosti` a jejich `atributy` (k nim za chvíli).
+
+OOP je založeno na 4 pilířích (vysvětlené budou v nějaké jejich vlastní kapitole):
+1. Encapsulation (Zapouzdření)
+2. Abstraction (Abstrakce)
+3. Inheritance (Dědičnost)
+4. Polymorphism (Polymorphismus)
+
+## Začátek OOP
+
+Základní objektů je nejdůležitější část OOP protože bez nich by to bylo jenom "normální" `funkční` (= používání funkcí jako hlavní věc v tomto paradigma) nebo `imperativní` (= toto paradigma používá jen základní funkčnosti programování jako větvení apod.). Pro založení objektu je důležité znám význam "vlastností" a "atributů". `Vlastnost` je něco jako název proměnné, něco jako naše X, Y nebo Z a `atribut` je hodnota té proměnné, což tam může být cokoliv (i další objekt, což staví hierarchii tak i dědičnosti, jeden z hlavních pilířů OOP ale i složitější datové typy, které si my jako programátoři zakládáme). Zde je jak se to syntakticky správně zakládá (zatím bez tříd, kontruktorů nebo metod).
+
+```js
+var clovek = {
+    jmeno: "Adam",
+    vek: 25,
+    povolani: "policajt"
+};
+
+/*zde jsem založil objekt jménem clovek s atributy jmeno, vek a povolani s atributy "Adam", 25 a "policajt". Všimněte si že přiřazování v zákládání objektu je `:` a ne `=`.
+*/
+
+console.log(clovek.jmeno);
+/* 
+Vypíše atribut od vlastnosti jmeno, v tomto případě "Adam".
+*/
+
+var obj = {
+    obj2:{
+        hodnota: "vnitrni hodnota",
+    },
+};
+
+/*
+Lze i v objektu založit další objekt, toto lze dělat do nekonečna ale více jak 3 nejsou doporučené kvůli náročnosti s prací s výsledným datovým typem, náročnosti pro počítač (zabírání hodně místa v paměti, zpomalení a procházení objektu je o dost pomalejší protože obsahuje více dat... Sice procházení objektů je O(n) náročnosti (lineární časová složitost) ale je to více a více náročnější čím více je tam objektů s vlastností, lineárně náročnější, což v 90% aplikací nevadí a nijak smysluplně to neovlivní dobu projití celého kódu - lehké optimalizace budou v nějaké další kapitole i s notacemi O (O-notion, big O notation)) a také kvůli toho kolik textu přidá na psaní.
+
+K přístupu objektů v objektu přistupujeme stejně jak u polí, zde je příklad.
+*/
+
+console.log(obj.obj2.hodnota);
+
+/*
+Vypíše to "vnitrni hodnkta" protože jsme přistoupili z objektu "obj" k objektu "obj2" a jeho vlastnosti "hodnota" s atributem "vnitrni hodnota". 
+
+Kdyby tam v objektu byl další objekt budeme postupovat stejně abychom ho mohli použít.
+*/
+```
