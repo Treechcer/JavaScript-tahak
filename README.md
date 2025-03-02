@@ -3,6 +3,7 @@
 ## Obsah
 
 - [Úvod](Úvod)
+- [Základy](Základy)
 
 ## Úvod
 
