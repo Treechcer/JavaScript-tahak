@@ -260,9 +260,10 @@ if (!true){ // nikdy nebude pravda a nikdy to nevejde do větvení protože true
     consol.elog("pravda");
 }
 
+//negace lze využít i na proměnné obsahují boolovy výrazy (true, false)
 ```
 
-## Binární součet (OR) a binární součin (AND)
+## Binární součet (OR), binární součin (AND) a binární negace
 
 BInární součet (|) a binární součin (&) a jak fungují.
 
@@ -289,6 +290,36 @@ let vysledek2 = a | b;
 výsledek 2 je 10
 */
 
+let a = 10;  // 1010 BIN
+let vysledek = ~a;  // bitová negace, invertování (obrácení) bitů 
+
+/*
+  a = 10 (DEC) = 1010 (Bin)
+
+  Bitová negace (invertování bitů):
+    1010  (a = 10)
+  změna na:
+    0101  (negace bitů)
+
+JS používá "dvoukomplementní zápis" proto je výsledek záporné číslo. Vysvětlení dvoukomplementního zápisu níže.
+
+Negace 1010 (BIN) je tedy -11 (DEC).
+
+
+dvoukomplementní zápis je k zápisu čísel v binární formě, záporné číslo v této formě je nějaké číslo celé negovane a +1 k tomu celému (musí být daný počet bitů). např.: 
+
+(pro 4 bity)
+5:
+0101
+
+negované:
+1010 (10)
++1
+
+1011 což je -5 v dvoukomonentovém zápisu, proto JS vyhodí obrácenou polaritu znaménka.
+*/
+
+console.log(vysledek);  // výsledek je -11
 ```
 
 ## Funkce
@@ -320,7 +351,9 @@ nazev3(x) //vrátí 5
 
 ```
 
-**pozn. nelze opakovat jména funkcí, jméno je možné mít pouze jedno*
+**pozn.0 nelze opakovat jména funkcí, jméno je možné mít pouze jedno*
+
+**pozn.1 `return` neboli vrácení proměnných z funkcí je velice důležitá část programování, dobrá praktika programování je dělat funkce, které něco vrací a nebo mají vedlejší efekt, není dobré používat všechny hodnoty jako "globální" a měnit je všude (což je způsob programování s funkcemi jenom s vedlejším efektem) ale jen ve funkcích kde by měli mít přístup. Funkce s vedlejším efektem jsou funkce co nic nevrací ale změní něco na obrazovce nebo podobné věci (příklad takovéto funkce je console.log() ), tyto funkce jsou také důležité a není špatné takové funkce zakládat ale neměly by to být jediné funkce, jaké budeme dělat aby se kód dal lépe opravovat a abychom se vyhnuli chybnosti. Globální proměnné nejsou vždy špatné ale je dobré jich mít co nejméně a jen ty nejpodstatnější.*
 
 ## Rozsah
 
