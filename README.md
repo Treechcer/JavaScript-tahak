@@ -21,6 +21,12 @@
 - [Cykly](#cykly)
   - [Cyklus `for`](#cyklus-for)
   - [Cyklus `while`](#cyklus-while)
+  - [Cyklus s podmínkou po každém opakování (do ... while)](#cyklus-s-podmínkou-po-každém-opakování-do--while)
+  - [Cyklus na procházení vlastností objektu (for ... in)](#cyklus-na-procházení-vlastností-objektu-for--in)
+  - [Cyklus pro procházení hodnot v iterovatelných objektech (for ... of)](#cyklus-pro-procházení-hodnot-v-iterovatelných-objektech-for--of)
+- [Seznamy](#seznamy)
+- [OOP (Objektově Orientované Programování)](#oop-objektově-orientované-programování)
+  - [Začátek OOP](#začátek-oop)
 
 ## Úvod
 
