@@ -4,7 +4,7 @@
 
 - [Úvod](Úvod)
 - [Základy](Základy)
-    -[Výpis do konzole](Výpis do konzole)
+ -[Výpis do konzole](Výpis do konzole)
 
 ## Úvod
 
