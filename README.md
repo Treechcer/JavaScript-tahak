@@ -329,6 +329,8 @@ let vysledek = ~a;  // bitová negace, invertování (obrácení) bitů
   změna na:
     0101  (negace bitů)
 
+V dvoukomplementním zápisu se musí přidat ještě +1 aby to bylo správně negované. Takže výsledek v JS bude 0110 místo 0101.
+
 JS používá "dvoukomplementní zápis" proto je výsledek záporné číslo. Vysvětlení dvoukomplementního zápisu níže.
 
 Negace 1010 (BIN) je tedy -11 (DEC).
