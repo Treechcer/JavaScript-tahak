@@ -1,0 +1,3 @@
+Udělej program, který bude vypočítávat BMI (Body Mass Index). Výpočet BMI je: (hmotnost (v kg) / (výška (v metrech)^2)), potom vypiš BMI člověka.
+
+pozn. k tomuto kódu se ještě vrátíme ještě ve větvení.
