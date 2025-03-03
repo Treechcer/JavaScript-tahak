@@ -1,0 +1,1 @@
+Udělej funkci co přijme jedno číslo a vrátí true pokud je sudé a false pokud je liché
