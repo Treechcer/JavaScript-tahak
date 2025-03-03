@@ -1,0 +1,1 @@
+Udělej zase zjištění jestli číslo je sudé nebo liché ale teďka to bude vypisovat místo 1 a 0 tak to vypíše sudé a liché
