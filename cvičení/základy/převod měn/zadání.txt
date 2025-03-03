@@ -1,0 +1,1 @@
+Budeme mít proměnnou, název této proměnné není důležitý, která bude v eurech a budeme to chtít přeměnit na české koruny, toto číslo chceme uložit v proměnné a vypsat přes consolo.log() nebo document.write(), na tomto nezáleží.
