@@ -1,0 +1,3 @@
+Toto bude zase stejný kód jako předtím u BMI jenom se změnou toho že použijeme funkci a prompt() neboli že se budeme ptát uživatele kolik váží, měří atd.
+
+pozn. zde musíme využít HTML protože jinak neuvidíme funkci prompt protože je pouze vidět v prohlížeči.

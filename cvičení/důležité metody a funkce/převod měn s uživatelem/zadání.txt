@@ -1,0 +1,4 @@
+Budeme zase převádět měny, zase EUR na CZK a teďka i naopak, jediný rozdíl tady je to že budeme kontrolovat jestli uživatel zadal dobrou hodnotu, pomocí while nebo do .. while
+cyklu, já využiju do .. while a vypsat to do HTML souboro pomocí document.write()
+
+pozn.: doporučuju udělat nebo si přečíst prvně příklad BMI na uživatele, protože tady budeme využívat věci vysvětlené tam, které jsou vysvětlené v pozdější kapitole

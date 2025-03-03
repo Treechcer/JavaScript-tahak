@@ -1,0 +1,6 @@
+Udělej funkci, která vypočítá fibunacciho sekvenci čísel do n, které bude v zavolání funkce a vydělejí je mezi sebou aby se přiblíž k výpočtu zlatého úhlu (
+výpoet zlatého úhlu stačí na poslední dvojci zadných čísel, protože dělením těmi mezi se budeme pouze blížit k zlatému úhlu a počítat všechny ostatní je zbytečné
+protože můžeme vypočítat přesnější)
+
+fibunacciho sekvence je sekvence čísel, která začíná čísly [0,1] a pokračuje sečtením posledních dvou čísel, takže první čísla jsou (0,1,1,2,3,5,8..), 
+výpočet zlatého úhlu se počítá vydělením posledních dvou čísel mezi sebou (větší děleno tím menším), je to vždy 1.6 zhruba
