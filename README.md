@@ -613,7 +613,8 @@ var clovek = {
     povolani: "policajt"
 };
 
-/*zde jsem založil objekt jménem clovek s atributy jmeno, vek a povolani s atributy "Adam", 25 a "policajt". Všimněte si že přiřazování v zákládání objektu je `:` a ne `=`.
+/*zde jsem založil objekt jménem clovek s atributy jmeno, vek a povolani s
+atributy "Adam", 25 a "policajt". Všimněte si že přiřazování v zákládání objektu je `:` a ne `=`.
 */
 
 console.log(clovek.jmeno);
@@ -630,13 +631,14 @@ var obj = {
 /*
 Lze i v objektu založit další objekt, toto lze dělat do nekonečna ale více
 jak 3 nejsou doporučené kvůli
-náročnosti s prací s výsledným datovým typem, náročnosti pro počítač (zabírání hodně místa v paměti, zpomalení a
-procházení objektu je o dost pomalejší
-protože obsahuje více dat... Sice procházení objektů je O(n) náročnosti (lineární časová složitost) ale je to
-více a více náročnější čím více je tam objektů s vlastností, lineárně
-náročnější, což v 90% aplikací nevadí a nijak smysluplně to neovlivní dobu projití celého kódu - lehké
-optimalizace budou v nějaké další
-kapitole i s notacemi O (O-notion, big O notation)) a také kvůli toho kolik textu přidá na psaní.
+náročnosti s prací s výsledným datovým typem, náročnosti pro počítač
+(zabírání hodně místa v paměti, zpomalení a procházení objektu je o dost pomalejší
+protože obsahuje více dat... Sice procházení objektů je O(n) náročnosti
+(lineární časová složitost) ale je to více a více náročnější čím více je tam
+objektů s vlastností, lineárně náročnější, což v 90% aplikací nevadí a nijak
+smysluplně to neovlivní dobu projití celého kódu - lehké optimalizace budou
+v nějaké další kapitole i s notacemi O (O-notion, big O notation)) a také kvůli
+toho kolik textu přidá na psaní.
 
 K přístupu objektů v objektu přistupujeme stejně jak u polí, zde je
  příklad.
@@ -645,7 +647,8 @@ K přístupu objektů v objektu přistupujeme stejně jak u polí, zde je
 console.log(obj.obj2.hodnota);
 
 /*
-Vypíše to "vnitrni hodnkta" protože jsme přistoupili z objektu "obj" k objektu "obj2" a jeho vlastnosti "hodnota" s atributem "vnitrni hodnota". 
+Vypíše to "vnitrni hodnkta" protože jsme přistoupili z objektu "obj" k objektu "obj2"
+a jeho vlastnosti "hodnota" s atributem "vnitrni hodnota". 
 
 Kdyby tam v objektu byl další objekt budeme postupovat stejně abychom ho mohli použít.
 */
