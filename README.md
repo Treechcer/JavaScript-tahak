@@ -32,6 +32,8 @@
 
 Toto je textové vysvětlení programovacího jazyka JavaScript, často zkracovaný jen na JS. JS je primárně určen na webové stránky a webové aplikace.
 
+**pozn. jsou tady i příklady ke kapitolám ve složkách podle názvu kapitoly, k procvičení kde je zadání.txt, které obsahuje zadání a pro kontrolu, inspiraci atd. je tam pak i řešení v .HTML a .JS souborech (protože toto je založené převážně na JS tak HTML není stylované nijak pořádně ale JS kód by měl obsahovat i nějaké komentáře na vysvětlení kódu (PS.: v datum psaní tohoto commitu ještě tady žádné cvičení není ale bude - datum 3.3. 2025)*
+
 # Základy
 
 ## Výpis do konzole
