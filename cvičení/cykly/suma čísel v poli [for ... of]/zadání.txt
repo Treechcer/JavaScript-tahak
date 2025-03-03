@@ -1,0 +1,3 @@
+toto je k seznamám více, takže pokud nevíš nic o seznamech prosím přečti si ještě kapitolu seznamy
+
+Dostaneš seznam (pole) s n počtem čísel a musíš všechna čísla sečíst vrátit zpátky

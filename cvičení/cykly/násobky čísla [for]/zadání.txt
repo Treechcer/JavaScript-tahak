@@ -1,0 +1,2 @@
+Dostaneš (bylo by dobré ve funkci ale není to nutné) vstup dvou čísel, jedno je číslo (např.) n, je činitel a druhé číslo (např. m)
+je kolikrát se budu násobit ale program vypíše všechny násobky od 1 do m. Musíš použít for cyklus.,
