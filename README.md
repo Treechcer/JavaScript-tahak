@@ -336,7 +336,8 @@ JS používá "dvoukomplementní zápis" proto je výsledek záporné číslo. V
 Negace 1010 (BIN) je tedy -11 (DEC).
 
 
-dvoukomplementní zápis je k zápisu čísel v binární formě, záporné číslo v této formě je nějaké číslo celé negovane a +1 k tomu celému (musí být daný počet bitů). např.: 
+dvoukomplementní zápis je k zápisu čísel v binární formě, záporné číslo v této formě je nějaké číslo celé negovane a
++1 k tomu celému (musí být daný počet bitů). např.: 
 
 (pro 4 bity)
 5:
@@ -367,14 +368,16 @@ function nazev2(parametr, paramentr0, .. ,parametrN){ //vytvoření funkce s par
 
 function nazev3(param){ // funkce s názvem "nazev3" co přijímá jeden parametr
     param++; 
-    return param //return je určen k vracení proměnných zpátky, nusí tam být pokud chceme proměnné zase použít protože kvůli rozsahu proměnné, k rozsahu v další kapitole
+    return param //return je určen k vracení proměnných zpátky, musí tam být pokud chceme proměnné zase použít protože kvůli
+                 // rozsahu proměnné, k rozsahu v další kapitole
 }
 
 nazev() // zavolaní funkce nazev bez parametrů
 nazev2(parametr, paramentr0, .. ,parametrN) // zavolaní funkce nazev2 s parametry
 nazev3(5) // vrátí 6
 console.log(nazev3(1)) // vypíše 2
-let vracenaHodnota = nazev3(10); // proměnná vracenaHodnota bude obsahovat 11 protože vrácena hodnota pomocí return se uloží do ní 
+let vracenaHodnota = nazev3(10); // proměnná vracenaHodnota bude obsahovat 11
+                                 // protože vrácena hodnota pomocí return se uloží do ní 
 
 var x = 4;
 nazev3(x) //vrátí 5
@@ -550,7 +553,8 @@ while (y == 0 || y == 5){
     y = prompt("zadej číslo mimo 0 a 5")
 
 /*
-tento vstup je ošetřen že uživatel může žádat cokoliv až na 0 a 5, protože 0 a 5 udělá to že se stránka zeptá znovu. Tady nám nevadí že prompt vrací string protože porovnáváme s == a ne s třemi ===.
+tento vstup je ošetřen že uživatel může žádat cokoliv až na 0 a 5, protože 0 a 5
+udělá to že se stránka zeptá znovu. Tady nám nevadí že prompt vrací string protože porovnáváme s == a ne s třemi ===.
 */
 }
 ```
