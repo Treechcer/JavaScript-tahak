@@ -606,6 +606,8 @@ OOP je založeno na 4 pilířích (vysvětlené budou v nějaké jejich vlastní
 
 Základní objektů je nejdůležitější část OOP protože bez nich by to bylo jenom "normální" `funkční` (= používání funkcí jako hlavní věc v tomto paradigma) nebo `imperativní` (= toto paradigma používá jen základní funkčnosti programování jako větvení apod.). Pro založení objektu je důležité znám význam "vlastností" a "atributů". `Vlastnost` je něco jako název proměnné, něco jako naše X, Y nebo Z a `atribut` je hodnota té proměnné, což tam může být cokoliv (i další objekt, což staví hierarchii tak i dědičnosti, jeden z hlavních pilířů OOP ale i složitější datové typy, které si my jako programátoři zakládáme). Zde je jak se to syntakticky správně zakládá (zatím bez tříd, kontruktorů nebo metod).
 
+**pozn. tento typ zakládání objektů se často v jiných jazicích jako např. Python nazávají dictionary (slovník)* 
+
 ```js
 var clovek = {
     jmeno: "Adam",
