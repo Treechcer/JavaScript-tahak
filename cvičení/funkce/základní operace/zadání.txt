@@ -1,0 +1,1 @@
+budeme mít základní operace jako (+,-,*,/), prot které uděláme vstup dvou čísel a přes return vrátíme výsledek
