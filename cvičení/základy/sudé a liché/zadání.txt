@@ -1,0 +1,3 @@
+V nějaké proměnné bude nějaké celé číslo, které chceme zjistit jestli je liché nebo sudé, 
+potom vypíšeme jestli je sudé (0 sudé, 1 liché - protože ještě neznáme podmínky apod. je to 
+nemožné udělat aby to vypsalo "sudé", "liché" proto se k tomuto kódu vrátíme ještě potom) 
