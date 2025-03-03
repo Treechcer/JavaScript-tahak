@@ -1,0 +1,7 @@
+Udělej kód, který zjistí BMI člověka (BMI = váha / výška^2) a pak vypiš jestli člověk je podváhou atd.
+
+tady je rozsah:
+  Podváha: BMI < 18,5
+  Normální váha: 18,5 – 24,9
+  Nadváha: 25 – 29,9
+  Obezita: BMI ≥ 30
