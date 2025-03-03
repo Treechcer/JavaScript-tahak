@@ -526,6 +526,70 @@ console.log(seznam[4][0]) // vypíše string "seznam" z seznamu co je na indexu 
 
 **pozn. není omezení na počet seznamů v seznamech ale není doporučené využít více než 3, protože pak je to složité to využívat*
 
+## Důležité metody a funkce
+
+Chtěl bych napsat zde pár důležitých metod a funkcí před začátkem OOP protože si myslím že je to důležité pro napsání kódů.
+
+### prompt()
+
+Prompt je funkce, která vyzve uživatele aby odpověděl na otázku co mu programátor (my) zadáme.
+
+```js
+var x = prompt("jaké je dneska počasí?");
+
+console.log(x);
+
+/*
+Při výstupu můžu vyjít cokoliv, protože uživatel může žádat cokoliv s vstup
+není nijak ošetřen. Na ošetření vstupu se používá while / do ... while cyklus
+*/
+var y = 0;
+while (y == 0 || y == 5){
+    y = prompt("zadej číslo mimo 0 a 5")
+
+/*
+tento vstup je ošetřen že uživatel může žádat cokoliv až na 0 a 5, protože 0 a 5 udělá to že se stránka zeptá znovu. Tady nám nevadí že prompt vrací string protože porovnáváme s == a ne s třemi ===.
+*/
+}
+```
+
+**pozn. `prompt` vrací `string`, převést string na číslo jsou další `funkce` a `metody`*
+
+### Number()
+
+Number je konstruktor třídy `Number()`, když si něho zavoláme string obsahující čísla založí nám číslo, jak `int` tak i `float`.
+
+```js
+var x = "1234";
+x = Number(x)
+
+/*
+převede x z textu "1234" na celé číslo 1234
+*/
+
+var y = 0.5;
+y = Number(y)
+
+/*
+převede y na desetiné číslo 0.5
+*/
+```
+
+### parseInt() a parseFloat()
+
+`ParseInt` a `parseFloat` jsou funkce co dělají podobnou věc, jedna převede na `int` (parseInt) a jedna převede na `float` (parseFloat).
+
+```js
+var x = "15.5";
+var y = 17.3;
+var z = 13
+
+x = parseInt(x) // x je 15 protože se převádí na celé číslo 
+y = parseFloat(y) // žádná změna 
+y = parseInt(y) // y je 17
+z = parseFloat(z) // z je 13 protože je to celé číslo a nemá desetiné místo 
+```
+
 # OOP (Objektově Orientované Programování)
 
 Objektově orientované programování (`OOP`) je programovací paradigma, které využívá `objekty`, `třídy`, `metody` apod. s objekty jsme se už setkali v dávnější kapitole o Cyklech s cyklem `for...in` ale to není všechno, každá proměnná v JS je objekt nějaké třídy, například celé číslo (INT) je objekt třídy `number`, to stejné i float (v JS `float` i `int` jsou objekt stejné třídy, k změně aby to bylo jako jiné třídy jsou funkce `parseInt()` a `parseFloat()`, což nezmění třídu ale dosáhne efektu podobného a to toho že to buď bude jako int nebo float po použití), string je zase objekt třídy `String`. Každá třídu může mít pod sebou i metody (např. třída `console` a její metoda `log`, která přijímá nějaký string, co má vytisknout). V JS jsou dva hlavní způsoby jak si udělat objekt, jeden je pomocí `třídy` a `konstruktorů` a druhá je pomocí `deklarování` (založení) proměnné, která obsahuje nějaké `vlastnosti` a jejich `atributy` (k nim za chvíli).
