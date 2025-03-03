@@ -32,7 +32,7 @@
 
 Toto je textové vysvětlení programovacího jazyka JavaScript, často zkracovaný jen na JS. JS je primárně určen na webové stránky a webové aplikace.
 
-**pozn. jsou tady i příklady ke kapitolám ve složkách podle názvu kapitoly, k procvičení kde je zadání.txt, které obsahuje zadání a pro kontrolu, inspiraci atd. je tam pak i řešení v .HTML a .JS souborech (protože toto je založené převážně na JS tak HTML není stylované nijak pořádně ale JS kód by měl obsahovat i nějaké komentáře na vysvětlení kódu (PS.: v datum psaní tohoto commitu ještě tady žádné cvičení není ale bude - datum 3.3. 2025)*
+**pozn. jsou tady i příklady ke kapitolám ve složkách podle názvu kapitoly, k procvičení kde je zadání.txt, které obsahuje zadání a pro kontrolu, inspiraci atd. je tam pak i řešení v .HTML a .JS souborech (protože toto je založené převážně na JS tak HTML není stylované nijak pořádně ale JS kód by měl obsahovat i nějaké komentáře na vysvětlení kódu*
 
 # Základy
 
@@ -561,7 +561,20 @@ udělá to že se stránka zeptá znovu. Tady nám nevadí že prompt vrací str
 }
 ```
 
-**pozn. `prompt` vrací `string`, převést string na číslo jsou další `funkce` a `metody`*
+**pozn.0 `prompt` vrací `string`, převést string na číslo jsou další `funkce` a `metody`*
+
+**pozn.1 musíme tento kód tát do HTML jinak nebude fungovat*
+
+```html
+<!-- do HTML se kód (script) dává pomocí tagu script s src a název souboru nebo jeho adrese kde je uložený -->
+<script src="mistoulozeni.js"> </script>
+
+<!-- nebo se také dá psát přímo do script tagu -->
+<script>
+var num = 0;
+num++;
+</script>
+```
 
 ### Number()
 
