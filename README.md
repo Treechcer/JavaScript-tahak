@@ -1,15 +1,21 @@
 # Tahák na JavaScript
 
-# test
+## udělat (to-do list)
 
-- [x] test
-- [] test
-- [] test
-
+- [x] základy
+- [x] větvení
+- [x] funce
+- [x] cykly
+- [x] vysvětlení OOP
+- [x] základy OOP
+- [] pokročilejší OOP
+- [] mít příklady ke všemu
+- [] a více
+- 
 ## Obsah
 
 - [Tahák na JavaScript](#tahák-na-javascript)
-- [test](#test)
+  - [udělat (to-do list)](#udělat-to-do-list)
   - [Obsah](#obsah)
   - [Úvod](#úvod)
 - [Základy](#základy)
@@ -25,6 +31,8 @@
     - [Pravdivostní tabulka AND:](#pravdivostní-tabulka-and)
     - [Pravdivostní tabulka OR:](#pravdivostní-tabulka-or)
   - [Binární součet (OR), binární součin (AND) a binární negace](#binární-součet-or-binární-součin-and-a-binární-negace)
+    - [Logická funkce XOR](#logická-funkce-xor)
+    - [Negované logické funkce](#negované-logické-funkce)
   - [Funkce](#funkce)
   - [Rozsah](#rozsah)
   - [Cykly](#cykly)
