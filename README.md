@@ -1,30 +1,43 @@
 # Tahák na JavaScript
 
+# test
+
+- [x] test
+- [] test
+- [] test
+
 ## Obsah
 
-- [Úvod](#úvod)
+- [Tahák na JavaScript](#tahák-na-javascript)
+- [test](#test)
+  - [Obsah](#obsah)
+  - [Úvod](#úvod)
 - [Základy](#základy)
   - [Výpis do konzole](#výpis-do-konzole)
   - [Komentáře](#komentáře)
   - [Proměnné](#proměnné)
   - [Aritmetické operace](#aritmetické-operace)
-  - [Speciální využití aritmetických operátorů](#speciální-využití-aritmetických-operátorů)
-  - [Inkrementace a dekrementace](#inkrementace-a-dekrementace)
-  - [Kombinované zápisy operátorů](#kombinované-zápisy-operátorů)
+    - [Speciální využití arimetický operátorů](#speciální-využití-arimetický-operátorů)
+  - [Další zápis inkrementace](#další-zápis-inkrementace)
 - [Větvení](#větvení)
   - [Podmínky](#podmínky)
-  - [Kombinace podmínek](#kombinace-podmínek)
-  - [Pravdivostní tabulka](#pravdivostní-tabulka)
-  - [Logické operátory](#logické-operátory)
-- [Funkce](#funkce)
-- [Rozsah](#rozsah)
-- [Cykly](#cykly)
-  - [Cyklus `for`](#cyklus-for)
-  - [Cyklus `while`](#cyklus-while)
-  - [Cyklus `do ... while`)](#cyklus-s-podmínkou-po-každém-opakování-do--while)
-  - [Cyklus `for ... in`)](#cyklus-na-procházení-vlastností-objektu-for--in)
-  - [Cyklus `for ... of`](#cyklus-pro-procházení-hodnot-v-iterovatelných-objektech-for--of)
-- [Seznamy](#seznamy)
+    - [Kombinace podmínek](#kombinace-podmínek)
+    - [Pravdivostní tabulka AND:](#pravdivostní-tabulka-and)
+    - [Pravdivostní tabulka OR:](#pravdivostní-tabulka-or)
+  - [Binární součet (OR), binární součin (AND) a binární negace](#binární-součet-or-binární-součin-and-a-binární-negace)
+  - [Funkce](#funkce)
+  - [Rozsah](#rozsah)
+  - [Cykly](#cykly)
+    - [Cyklus s určitým počtem opakování (for)](#cyklus-s-určitým-počtem-opakování-for)
+    - [Cyklus s neurčeným počtem opakování (while)](#cyklus-s-neurčeným-počtem-opakování-while)
+    - [Cyklus s podmínkou po každém opakování (do ... while)](#cyklus-s-podmínkou-po-každém-opakování-do--while)
+    - [Cyklus na procházení vlastností objektu (for ... in)](#cyklus-na-procházení-vlastností-objektu-for--in)
+    - [cyklus pro procházení hodnot v iterovatelných objektech (for ... of)](#cyklus-pro-procházení-hodnot-v-iterovatelných-objektech-for--of)
+  - [Seznamy](#seznamy)
+  - [Důležité metody a funkce](#důležité-metody-a-funkce)
+    - [prompt()](#prompt)
+    - [Number()](#number)
+    - [parseInt() a parseFloat()](#parseint-a-parsefloat)
 - [OOP (Objektově Orientované Programování)](#oop-objektově-orientované-programování)
   - [Začátek OOP](#začátek-oop)
 
