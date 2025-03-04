@@ -8,10 +8,10 @@
 - [x] cykly
 - [x] vysvětlení OOP
 - [x] základy OOP
-- [] pokročilejší OOP
-- [] mít příklady ke všemu
-- [] a více
-- 
+- [ ] pokročilejší OOP
+- [ ] mít příklady ke všemu
+- [ ] a více
+  
 ## Obsah
 
 - [Tahák na JavaScript](#tahák-na-javascript)
