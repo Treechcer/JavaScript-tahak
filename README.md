@@ -368,6 +368,92 @@ negované:
 console.log(vysledek);  // výsledek je -11
 ```
 
+### Logická funkce XOR
+
+XOR je logická funkce, která je pravdivá pouze a tehdy kdy je jenom jedna strana pravdivá. Je to pokročilejší logická funkce a dá se sestavit z jednoduchých logických funkcí (AND, OR a NOT (v tomto případě jen OR a AND)). Zapisuje se pomocí `^`.
+
+XOR
+| A   | B   | Y   |
+| --- | --- | --- |
+| 0   | 0   | 0   |
+| 0   | 1   | 1   |
+| 1   | 0   | 1   |
+| 1   | 1   | 0   |
+
+Y = (A * !B) + (!A * B)
+
+```js
+if (true ^ false){ // půjde dale protože je to tru
+
+}
+
+if (true ^ true){ // neprojde je to false 
+
+}
+```
+
+Také je i binární XOR.
+
+```js
+console.log(5 ^ 3); 
+
+/*
+
+5 DEC = 101 BIN
+3 DEC = 011 BIN
+----------------
+        110 - 6 DEC
+```
+
+### Negované logické funkce
+
+I logické lze negovat, zde je NAND.
+
+NAND
+| A   | B   | Y   |
+| --- | --- | --- |
+| 0   | 0   | 1   |
+| 0   | 1   | 1   |
+| 1   | 0   | 1   |
+| 1   | 1   | 0   |
+
+Y = !(A * B)
+
+BIN NAND = `~(A & B)`
+
+NAND je jako OR ale obrácený, ve smyslu toho že Y otočený o "180°". Je to kvůli toho že když je ta funkce negována tak její Y bez negace před ní se počítá jako Y = `!A + !B`
+
+**pozn. negace obrací znaménko, z + je * a naopak*
+
+NOR
+| A   | B   | Y   |
+| --- | --- | --- |
+| 0   | 0   | 1   |
+| 0   | 1   | 0   |
+| 1   | 0   | 0   |
+| 1   | 1   | 0   |
+
+Y = !(A + B) = !A * !B
+
+BIN NOR = `~(A | B)`
+
+XNOR
+| A   | B   | Y   |
+| --- | --- | --- |
+| 0   | 0   | 1   |
+| 0   | 1   | 0   |
+| 1   | 0   | 0   |
+| 1   | 1   | 1   |
+
+Y = !((A * !B) + (!A * B))
+Y = (!A + B) * (A + !B)
+
+také je možný:
+
+Y = (!A * !B) + (A * B)
+
+BIN XNOR: `~(A ^ B)`
+
 ## Funkce
 
 S funkcemi jsme se setkali už na začátku s funkcí "console.log()" (pro upřesnění, console.log() je metoda ale s jejím využít je jako funkce). Funkce je část kódu, která se dá znovu zavolat pomocí jejího jména a pokud přijímá nějaké parametry tak název s parametry. Funkce dokud nebude zavolaná nic neudělá, bude jenom "přehlédnuta počítačem" dokud ji nezavoláme.
