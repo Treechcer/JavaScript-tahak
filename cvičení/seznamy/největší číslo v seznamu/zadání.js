@@ -1,0 +1,1 @@
+udělej kód, kde bude funkce, která přijme pole plně čísel a vrátí největší číslo z toho pole
