@@ -234,7 +234,7 @@ Podmínky obsahují porovnávání, lze použít tyto v JS:
 
 **pozn.0 jedno rovná se (=) je znak pro přiřazení ne pro porovnávání. Udělá to chybu.*
 
-**pozn.1 je lepší využívat `===` v podmínkách než `==` hlavně když nevíte rozdíl*
+**pozn.1 je lepší využívat `===` a `!==` v podmínkách než `==` a `!=` hlavně když nevíte rozdíl*
 
 
 **vysvětlení:*
