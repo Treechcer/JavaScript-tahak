@@ -53,7 +53,7 @@
 
 Toto je textové vysvětlení programovacího jazyka JavaScript, často zkracovaný jen na JS. JS je primárně určen na webové stránky a webové aplikace.
 
-**pozn. jsou tady i příklady ke kapitolám ve složkách podle názvu kapitoly, k procvičení kde je zadání.txt, které obsahuje zadání a pro kontrolu, inspiraci atd. je tam pak i řešení v .HTML a .JS souborech (protože toto je založené převážně na JS tak HTML není stylované nijak pořádně ale JS kód by měl obsahovat i nějaké komentáře na vysvětlení kódu*
+**pozn. jsou tady i příklady ke kapitolám ve složkách podle názvu kapitoly, k procvičení kde je zadání.txt, které obsahuje zadání a pro kontrolu, inspiraci atd. je tam pak i řešení v .HTML a .JS souborech, protože toto je založené převážně na JS tak HTML není stylované nijak pořádně ale JS kód by měl obsahovat i nějaké komentáře na vysvětlení kódu*
 
 # Základy
 
@@ -63,7 +63,7 @@ Toto je textové vysvětlení programovacího jazyka JavaScript, často zkracova
 console.log("Ahoj Světe!");
 ```
 
-Tento příkaz (funkce / metoda ale k nim později) vypíše do konzole prohlížeče „Ahoj Světe!“ - bez těch uvozovek. To proto, že příkaz "console.log()" vypíše všechno v uvozovkách. 
+Tento příkaz (funkce / metoda ale k nim později) vypíše do konzole prohlížeče „Ahoj Světe!“ - bez těch uvozovek. To proto, že příkaz "console.log()" vypíše všechno v uvozovkách, čísla apod. 
 
 **pozn. každý příkaz v JS by měl mít na konci řádku středník (;) ale nemusí, výjimky později*
 
@@ -82,7 +82,7 @@ více řádků
 */
 ```
 
-**pozn. více řádkové komentáře začínají `\*` a končí `*/`*
+**pozn. více řádkové komentáře začínají `/*` a končí `*/`*
 
 ## Proměnné
 
@@ -93,7 +93,7 @@ var slovo = "Ahoj Světe!"; // text (string)
 var pravda = true; // boolean
 ```
 
-V JS je mnoho datových typů, např. celé číslo (int), číslo s desetinnou čárkou (float), znaky (string) a logická hodnota (boolean neboli hodnota obsahující pouze pravdu `true` nebo nepravdu `false`). Všechny tyto hodnoty nemusí být nijak speciálně označeny, až na string, text má vždy uvozovky, je jedno jaké (`"`, `'` a \` ) dokud je stejnými ukončím, text může obsahovat jak znaky (A,b,C,d,e,f..) tak i čísla (0,1,2..) a lze provádět s nimi aritmetické operace pokud obsahují pouze čísla protože se automaticky převedou na čísla (int nebo float, podle potřeby). Každá proměnná v JS se vytváří (deklaruje) se slovem `var`, `let` nebo `const`. Rozdíl mezi var a let není pro začátečníky důležitý ale oboje založí proměnnou, která se dá použít a je automaticky (dynamicky) daný datový typ, proměnné se můžou i v jejich životech změnit datový typ, může začít např. jako string a pak být int. `Const` je konstata, také se automaticky (dynamicky) vybere datový typ, konstatny nelze měnit, po založení nejde upravit, předělat apod.
+V JS je mnoho datových typů, např. celé číslo (int), číslo s desetinnou čárkou (float), znaky (string) a logická hodnota (boolean neboli hodnota obsahující pouze pravdu `true` nebo nepravdu `false`). Všechny tyto hodnoty nemusí být nijak speciálně označeny, až na string, text má vždy uvozovky, je jedno jaké (`"`, `'` a \` ) dokud je stejnými ukončím, text může obsahovat jak znaky (A,b,C,d,e,f..) tak i čísla (0,1,2..) a lze provádět s nimi aritmetické operace pokud obsahují pouze čísla protože se automaticky převedou na čísla (int nebo float, podle potřeby). Každá proměnná v JS se vytváří (deklaruje) se slovem `var`, `let` nebo `const`. Rozdíl mezi var a let není pro začátečníky důležitý ale oboje založí proměnnou, která se dá použít a je automaticky (dynamicky) daný datový typ, proměnné se můžou i v jejich životech změnit datový typ, může začít např. jako string a pak být int. `Const` je konstata, konstatny nelze měnit, po založení nejde upravit, předělat apod.
 
 **pozn. JS obsahuje více datových typů ale ostatní nejsou v tuto chvíli důležité*
 
@@ -130,9 +130,11 @@ var modulo = 10 % 3; // 1
 
 `%` zbytek po dělení (modulo)
 
+**pozn. odmocnina to je když použijeme 1/n kdy n je jakou chceme odmocninu*
+
 ### Speciální využití arimetický operátorů
 
-Plus (+) lze použít i na spojení (concatinade) stringů
+Plus (+) lze použít i na spojení (concatenate) stringů
 
 ```js
 var str1 = "Ahoj ";
@@ -144,7 +146,7 @@ var str4 = "Světe!";
 console.log(str3 + str4); // výstup:AhojSvěte!
 ```
 
-Dvě plus (++) před nebo za proměnnou obsahující čísla ji inkrementuje, podle pozice je chvíle kdy se to stane.
+Dvě plus (++) před nebo za proměnnou obsahující čísla ji inkrementuje, podle pozice je chvíle kdy se to stane. Před proměnnou to udělá jako první za ní jako poslední.
 
 ```js
 var x = 1;
@@ -167,7 +169,7 @@ console.log(x); // 6
 console.log(y); // 5
 ```
 
-Tady lze vidět rozdíl a to ten kdy se proměnná (v tomto případě x) zvětší. Před x se to splní jako první věc, lze si to představit jako násobení v matematice že se to udělá první a za x se to provede po všech operací, lze si to představit jako sčítání v matematice.
+Tady lze vidět rozdíl a to ten kdy se proměnná (v tomto případě x) zvětší. Před x se to splní jako první věc a za x se to provede po všech operací.
 
 **pozn. to stejné funguje s mínusem (x--, --x)*
 
@@ -183,13 +185,14 @@ var x = 1;
 x += 1; // 2 .. x = x + 1
 ```
 
-Kombinovaný zápis (+=) je možné využít na inkrementaci o jakékoliv číslo.
+Kombinovaný zápis (`+=`) je možné využít pro přičtení jakékoliv číslo k proměnné.
 
 **pozn. kombinovaný zápis má i varianty: `-=`, `*=`, `/=`. Vždy to je jako `x = x + n` kdy n je jakékoliv číslo, tento zápis platí pro všechny operace jen s tím že se operace mění.*
 
 # Větvení
 
-Větvení je základní a velice důležitá věc v programování, dovoluje nám aby náš program se mohl rozhodovat. Vždy když podmínka je pravda (true - boolenské hodnoty) tak se udělá všechen kód co je v bloku kódu pod rozhodnutím.
+Větvení je základní a velice důležitá věc v programování, dovoluje nám aby náš program se mohl rozhodovat. Vždy když podmínka je pravda (true - booleovská hodnoty) tak se
+spustí kód v tom bloku kódu.
 
 ```js
 if (podminka){
@@ -205,7 +208,7 @@ else{
 
 Tady je jednoduché schéma jak zapisovat větvení.
 
-**pozn. `if` a `else if` se spustí vždy když jejich podmínka je pravdivá a spustí se vždycky ten první pravdivý, `else` se spustí pokud žádný jiný nebyl pravdivý*
+**pozn. `if` a `else if` se spouští když je pravdivý, spustí se první pravdivý, takže když je pevní podmínka pravdivá a třeba pátá, spustí se pouze ta první, `else` se spustí pokud žádný jiný nebyl pravdivý*
 
 ## Podmínky
 
@@ -228,7 +231,7 @@ Podmínky obsahují porovnávání, lze použít tyto v JS:
 `<` - levá strana je větší jak pravá 
 
 
-**pozn. jedno rovná se (=) je znak pro přiřazení ne pro porovnávání a v podmínce vyvolá chybu.*
+**pozn. jedno rovná se (=) je znak pro přiřazení ne pro porovnávání. Udělá to chybu.*
 
 
 **vysvětlení:*
@@ -261,7 +264,7 @@ Y = A * B
 
 0 = false
 
-**pozn. logická funkce AND se také nazývá loigický součin*
+**pozn. logická funkce AND se také nazývá logický součin*
 
 ### Pravdivostní tabulka OR:
 
@@ -275,7 +278,7 @@ OR
 
 Y = A + B
 
-**pozn. logická funkce OR se také nazývá loigický součet*
+**pozn. logická funkce OR se také nazývá logický součet*
 
 V JS kódu v podmínkách se používá:
 ```js
@@ -308,7 +311,7 @@ if (true){ // vždy bude pravda a vejde do větvení
 }
 
 if (!true){ // nikdy nebude pravda a nikdy to nevejde do větvení protože true se vždy neguje na false
-    consol.elog("pravda");
+    consol.log("pravda");
 }
 
 //negace lze využít i na proměnné obsahují boolovy výrazy (true, false)
@@ -352,7 +355,7 @@ let vysledek = ~a;  // bitová negace, invertování (obrácení) bitů
   změna na:
     0101  (negace bitů)
 
-V dvoukomplementním zápisu se musí přidat ještě +1 aby to bylo správně negované. Takže výsledek v JS bude 0110 místo 0101.
+V dvoukomplementním zápisu se musí přidat ještě +1 aby to bylo správně negované. Takže výsledek v JS bude 0110 místo 0101, protože se přidalo + 0001.
 
 JS používá "dvoukomplementní zápis" proto je výsledek záporné číslo. Vysvětlení dvoukomplementního zápisu níže.
 
@@ -429,7 +432,7 @@ Y = !(A * B)
 
 BIN NAND = `~(A & B)`
 
-NAND je jako OR ale obrácený, ve smyslu toho že Y otočený o "180°". Je to kvůli toho že když je ta funkce negována tak její Y bez negace před ní se počítá jako Y = `!A + !B`
+NAND je jako OR ale obrácený, ve smyslu toho že Y je otočený o "180°". Je to kvůli toho že když je ta funkce negována tak její Y bez negace před ní se počítá jako Y = `!A + !B`
 
 **pozn. negace obrací znaménko, z + je * a naopak*
 
@@ -464,18 +467,18 @@ BIN XNOR: `~(A ^ B)`
 
 ## Funkce
 
-S funkcemi jsme se setkali už na začátku s funkcí "console.log()" (pro upřesnění, console.log() je metoda ale s jejím využít je jako funkce). Funkce je část kódu, která se dá znovu zavolat pomocí jejího jména a pokud přijímá nějaké parametry tak název s parametry. Funkce dokud nebude zavolaná nic neudělá, bude jenom "přehlédnuta počítačem" dokud ji nezavoláme.
+S funkcemi jsme se setkali už na začátku s funkcí "console.log()" (pro upřesnění, console.log() je metoda ale v tomto případě to nevadí, metody jsou potom v OOP). Funkce je část kódu, která se dá znovu zavolat pomocí jejího jména a pokud přijímá nějaké parametry tak její název se doplní parametry v závorce, která je prázdná a musí tam být když tam nejosu parametry. Funkce dokud nebude zavolaná nic neudělá, bude jenom "přehlédnuta počítačem" dokud ji nezavoláme.
 
 ```js
 function nazev(){ //vytvoření funkce bez parametrů
 
 }
 
-function nazev2(parametr, paramentr0, .. ,parametrN){ //vytvoření funkce s parametry, může jich tam být kolik chcememe, 1 až N
+function nazev2(parametr, parametr0, .. ,parametrN){ //vytvoření funkce s parametry, může jich tam být kolik chcememe, 1 až N
 
 }
 
-function nazev3(param){ // funkce s názvem "nazev3" co přijímá jeden parametr
+function nazev3(param){ // funkce s názvem "nazev3", která přijímá jeden parametr
     param++; 
     return param //return je určen k vracení proměnných zpátky, musí tam být pokud chceme proměnné zase použít protože kvůli
                  // rozsahu proměnné, k rozsahu v další kapitole
@@ -483,7 +486,7 @@ function nazev3(param){ // funkce s názvem "nazev3" co přijímá jeden paramet
 
 nazev() // zavolaní funkce nazev bez parametrů
 nazev2(parametr, paramentr0, .. ,parametrN) // zavolaní funkce nazev2 s parametry
-nazev3(5) // vrátí 6
+nazev3(5) // vrátí 6, protože ve funkci se číslo inkrementuje (zvětší)
 console.log(nazev3(1)) // vypíše 2
 let vracenaHodnota = nazev3(10); // proměnná vracenaHodnota bude obsahovat 11
                                  // protože vrácena hodnota pomocí return se uloží do ní 
@@ -493,9 +496,9 @@ nazev3(x) //vrátí 5
 
 ```
 
-**pozn.0 nelze opakovat jména funkcí, jméno je možné mít pouze jedno*
+**pozn.0 nelze mít dvě funkce se stejným názvem ve stejném rozsahu (scope)*
 
-**pozn.1 `return` neboli vrácení proměnných z funkcí je velice důležitá část programování, dobrá praktika programování je dělat funkce, které něco vrací a nebo mají vedlejší efekt, není dobré používat všechny hodnoty jako "globální" a měnit je všude (což je způsob programování s funkcemi jenom s vedlejším efektem) ale jen ve funkcích kde by měli mít přístup. Funkce s vedlejším efektem jsou funkce co nic nevrací ale změní něco na obrazovce nebo podobné věci (příklad takovéto funkce je console.log() ), tyto funkce jsou také důležité a není špatné takové funkce zakládat ale neměly by to být jediné funkce, jaké budeme dělat aby se kód dal lépe opravovat a abychom se vyhnuli chybnosti. Globální proměnné nejsou vždy špatné ale je dobré jich mít co nejméně a jen ty nejpodstatnější.*
+**pozn.1 `return` neboli vrácení proměnných z funkcí je velice důležitá část programování, dobrá praktika programování je dělat funkce, které něco vrací a nebo mají vedlejší efekt, není dobré používat všechny hodnoty jako "globální" a měnit je všude (což je způsob programování s funkcemi jenom s vedlejším efektem) ale jen ve funkcích kde by měli mít přístup. Funkce s vedlejším efektem jsou funkce co nic nevrací ale změní něco na obrazovce nebo podobné věci (příklad takovéto funkce je console.log() ), tyto funkce jsou také důležité a není špatné takové funkce zakládat ale neměly by to být jediné funkce, jaké budeme dělat aby se kód dal lépe opravovat a abychom se vyhnuli chybnosti. Globální proměnné nejsou vždy špatné ale je dobré jich mít co nejméně a jen ty nejpodstatnější, protože hodně jich vede k neudržitelnosti kódu.*
 
 ## Rozsah
 
@@ -528,7 +531,7 @@ tLet();
 
 ### Cyklus s určitým počtem opakování (for)
 
-Cyklus s určitým počkem opakování je `for`. 
+Cyklus s určitým počkem opakování je `for`, poiužíváme ho vždycky když víme kolikrát potřebujeme iterací (opakování). 
 
 ```js
 for (let i = 1; i <= 10; i++){
@@ -546,15 +549,15 @@ for (let i = 10; i >= 1; i--){
 
 **vysvětlení zápisu: první věc v závorce (např. `let i = 0;`) je část kódu co se spustí přesně jednou a to na začátku před cyklem a proměnnou založí (deklaruje) proměnnou `i` (nebo jinou proměnnou), která se bude rovnat tím za rovná se, tady by to byla `0`, druhá je podmínka (např. `i < 10;`), která se vyhodnocuje po každé iteraci (opakování) dokud výsledek není false, až je tak to skončí a třetí část (např `i++`) se vyhodnocuje po každé zkontrování podmínky, nejčastěji tam je nějaká inkrementace.
 
-**pozn. jedno z nejčastějších využití pro počítání indexu u polí / seznamů (v JS seznamů v jiných jazicích to můžou být správně pole ale v konverzaci je to celkem jedno a není úplně chab říct oboje nebo opak).*
+**pozn. jedno z nejčastějších využití pro počítání indexu u polí / seznamů (v JS seznamů v jiných jazicích to můžou být správně pole ale v konverzaci je to celkem jedno a není úplně chab říct oboje nebo opak).*jso
 
 ### Cyklus s neurčeným počtem opakování (while)
 
-Cyklus s neurčeným počtem opakování (`while`) se vyhodnocuje po každé interace (projití cyklu) a dokud je pravda (true) tak do té doby jede dále, s false končí. 
+Cyklus s neurčeným počtem opakování (`while`) se vyhodnocuje před každou interace (projití cyklu) a dokud je pravda (true) tak do té doby jede dále, s false končí. 
 
 **pozn. cyklus s neurčitým počtem opakováním je často nazývám také cyklus s podmínkou před každým opakováním*
 
-**pozn.0 lze udělat nekonečný cyklus, těm se snažíme vždy vyhnout*
+**pozn.0 lze udělat nekonečný cyklus, těm se snažíme vždy vyhnout (např. while(true) - nikdy nebude nepravda)*
 
 ```js
 let i = 0
@@ -626,7 +629,7 @@ for (let index of seznam) {
 
 ## Seznamy
 
-Seznam je datový typ proměnné, který umožňuje uložit více dat do jedné proměnné, proměnné nemusí mít ani stejný datový typ, takže tam může být string, int apod. Seznamy jsou indexované, první index je 0 a poslední je `n-1`, přičemž n je počet prvků v seznamu
+Seznam je datový typ proměnné, který umožňuje uložit více dat do jedné proměnné, proměnné nemusí mít ani stejný datový typ, takže tam může být string, int apod. Seznamy jsou indexované, první index je 0 a poslední je `n-1`, přičemž n je počet prvků v seznamu, tudíž je možné procházet pole pomocí indexů (název proměnné + hranaté závorky + čísla. např seznam[0] je prvek na indexu 0 atd.).
 
 ```js
 var seznam = [0,5,7,"Ahoj",["seznam", "pole"], 0.54]
@@ -685,7 +688,9 @@ num++;
 
 ### Number()
 
-Number je konstruktor třídy `Number()`, když si něho zavoláme string obsahující čísla založí nám číslo, jak `int` tak i `float`.
+Number je konstruktor třídy `Number()`, když si něho zavoláme string obsahující čísla založí nám číslo, jak `int` tak i `float`. 
+
+**pozn. když ho zavoláme s neplatným stringem hodnot brátí "NaN" - Not a Number*
 
 ```js
 var x = "1234";
@@ -720,7 +725,7 @@ z = parseFloat(z) // z je 13 protože je to celé číslo a nemá desetiné mís
 
 # OOP (Objektově Orientované Programování)
 
-Objektově orientované programování (`OOP`) je programovací paradigma, které využívá `objekty`, `třídy`, `metody` apod. s objekty jsme se už setkali v dávnější kapitole o Cyklech s cyklem `for...in` ale to není všechno, každá proměnná v JS je objekt nějaké třídy, například celé číslo (INT) je objekt třídy `number`, to stejné i float (v JS `float` i `int` jsou objekt stejné třídy, k změně aby to bylo jako jiné třídy jsou funkce `parseInt()` a `parseFloat()`, což nezmění třídu ale dosáhne efektu podobného a to toho že to buď bude jako int nebo float po použití), string je zase objekt třídy `String`. Každá třídu může mít pod sebou i metody (např. třída `console` a její metoda `log`, která přijímá nějaký string, co má vytisknout). V JS jsou dva hlavní způsoby jak si udělat objekt, jeden je pomocí `třídy` a `konstruktorů` a druhá je pomocí `deklarování` (založení) proměnné, která obsahuje nějaké `vlastnosti` a jejich `atributy` (k nim za chvíli).
+Objektově orientované programování (`OOP`) je programovací paradigma, které využívá `objekty`, `třídy`, `metody` apod. s objekty jsme se už setkali v dávnější kapitole o Cyklech s cyklem `for...in` ale to není všechno, většina proměných je v JS je objekt nějaké třídy, například objekty typu `Object`, `Array`, `Function`, ale primitivní datové typy jako čísla nebo řetězce jsou zvláštní hodnoty, které nepatří přímo mezi objekty (primitivní datové typy). Každá třídu může mít pod sebou i metody (např. třída `console` a její metoda `log`, která přijímá nějaký string, co má vytisknout). V JS jsou dva hlavní způsoby jak si udělat objekt, jeden je pomocí `třídy` a `konstruktorů` a druhá je pomocí `deklarování` (založení) proměnné, která obsahuje nějaké `vlastnosti` a jejich `atributy` (k nim za chvíli).
 
 OOP je založeno na 4 pilířích (vysvětlené budou v nějaké jejich vlastní kapitole):
 1. Encapsulation (Zapouzdření)
@@ -759,14 +764,8 @@ var obj = {
 /*
 Lze i v objektu založit další objekt, toto lze dělat do nekonečna ale více
 jak 3 nejsou doporučené kvůli
-náročnosti s prací s výsledným datovým typem, náročnosti pro počítač
-(zabírání hodně místa v paměti, zpomalení a procházení objektu je o dost pomalejší
-protože obsahuje více dat... Sice procházení objektů je O(n) náročnosti
-(lineární časová složitost) ale je to více a více náročnější čím více je tam
-objektů s vlastností, lineárně náročnější, což v 90% aplikací nevadí a nijak
-smysluplně to neovlivní dobu projití celého kódu - lehké optimalizace budou
-v nějaké další kapitole i s notacemi O (O-notion, big O notation)) a také kvůli
-toho kolik textu přidá na psaní.
+náročnosti s prací s výsledným datovým typem, náročnosti pro počítač 
+a také kvůli toho kolik textu přidá na psaní.
 
 K přístupu objektů v objektu přistupujeme stejně jak u polí, zde je
  příklad.

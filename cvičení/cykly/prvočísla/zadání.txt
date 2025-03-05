@@ -1,0 +1,2 @@
+Udělej funkci, která přijímá celé číslo. Tato funkce vypíše všechna prvočísla do zadaného čísla.
+Prvočíslo je číslo, které je dělitelné pouze 1 a samo sebou (nejmenší počet dělitelů).

@@ -1,1 +1,1 @@
-dostaneme seznam čísel a číslo co máme hledat, musíme vrátit index toho čísla, pokud tam není vrátíme false
+dostaneme seznam čísel a číslo, které máme hledat, musíme vrátit index toho čísla, pokud tam není vrátíme false
