@@ -1,1 +1,7 @@
-.
+Udělej kód, který odhadne pí (π) pomocí vzorečku: π = 4 * (1-1/3+1/5-1/7+1/9-1/11+..)
+
+neboli začneme na 1 a budeme obracet odčítání a sčítání 1/na kdy n je vždycky nejbližší liché číslo posledního lichého čísla a to nám vznikne 1/4 π takže to budeme muset vynásobit.
+
+pozn.0: nevznikne nám π ale jehoo odhad
+
+pozn.1: musíme dojít do čísel okolo 100 minimálně abychom měli dostatečně přesný odhad π
