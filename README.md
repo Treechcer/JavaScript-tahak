@@ -87,10 +87,10 @@ více řádků
 ## Proměnné
 
 ```js
-var x = 5; // celé číslo (int)
-var t = 5.555; // desetinné číslo
-var slovo = "Ahoj Světe!"; // text (string)
-var pravda = true; // boolean
+let x = 5; // celé číslo (int)
+let t = 5.555; // desetinné číslo
+let slovo = "Ahoj Světe!"; // text (string)
+let pravda = true; // boolean
 ```
 
 V JS je mnoho datových typů, např. celé číslo (int), číslo s desetinnou čárkou (stále patří pod int - Number - ale budu je nazývat float kvůli zvyku z ostatních jazyků), znaky (string) a logická hodnota (boolean neboli hodnota obsahující pouze pravdu `true` nebo nepravdu `false`). Všechny tyto hodnoty nemusí být nijak speciálně označeny, až na string, text má vždy uvozovky, je jedno jaké (`"`, `'` a \` ) dokud je stejnými ukončím, text může obsahovat jak znaky (A,b,C,d,e,f..) tak i čísla (0,1,2..) a lze provádět s nimi aritmetické operace pokud obsahují pouze čísla protože se automaticky převedou na čísla (int nebo float, podle potřeby). Každá proměnná v JS se vytváří (deklaruje) se slovem `var`, `let` nebo `const`. Rozdíl mezi var a let není pro začátečníky důležitý ale oboje založí proměnnou, která se dá použít a je automaticky (dynamicky) daný datový typ, proměnné se můžou i v jejich životech změnit datový typ, může začít např. jako string a pak být int. `Const` je konstanta, konstanty nelze měnit, po založení nejde upravit, předělat apod.
@@ -108,15 +108,15 @@ V JS je mnoho datových typů, např. celé číslo (int), číslo s desetinnou 
 Aritmetické operace lze používat s čísly ale stejné znaky (operátory) mohou dělat i jiné věci než jen aritmetické operace – to ale probereme v další kapitole.
 
 ```js
-var x = 5 + 10; // x = 15
-var y = 7;
-var z = x + y; // 22
-var t = 5 * 2; // 10
-var u = 10 / 2; // 5
-var mocnina = 2 ** 3; // 8, 2^3
-var mocnina2 = 3 ** 2; // 9, 3^2
-var odmocnina = 4 ** 0.5; // 2, 4^0.5
-var modulo = 10 % 3; // 1
+let x = 5 + 10; // x = 15
+let y = 7;
+let z = x + y; // 22
+let t = 5 * 2; // 10
+let u = 10 / 2; // 5
+let mocnina = 2 ** 3; // 8, 2^3
+let mocnina2 = 3 ** 2; // 9, 3^2
+let odmocnina = 4 ** 0.5; // 2, 4^0.5
+let modulo = 10 % 3; // 1
 ```
 
 `+` plus
@@ -138,19 +138,19 @@ var modulo = 10 % 3; // 1
 Plus (+) lze použít i na spojení (concatenate) stringů
 
 ```js
-var str1 = "Ahoj ";
-var str2 = "Světe!";
+let str1 = "Ahoj ";
+let str2 = "Světe!";
 console.log(str1 + str2); // výstup:Ahoj Světe!
 
-var str3 = "Ahoj";
-var str4 = "Světe!";
+let str3 = "Ahoj";
+let str4 = "Světe!";
 console.log(str3 + str4); // výstup:AhojSvěte!
 ```
 
 Dvě plus (++) před nebo za proměnnou obsahující čísla ji inkrementuje, podle pozice je chvíle kdy se to stane. Před proměnnou to udělá jako první za ní jako poslední.
 
 ```js
-var x = 1;
+let x = 1;
 x++;
 ++x;
 ```
@@ -181,7 +181,7 @@ Tady lze vidět rozdíl a to ten kdy se proměnná (v tomto případě x) zvět�
 ## Další zápis inkrementace 
 
 ```js
-var x = 1;
+let x = 1;
 //x++ == x += 1
 x += 1; // 2 .. x = x + 1
 ```
@@ -202,6 +202,7 @@ if (podminka){
 else if (podminka2){
     udelatNecoJineho()
 }
+... // zde může být kolik potřebujete else if
 else{
     udelatNecoDalsiho()
 }
@@ -397,11 +398,16 @@ XOR
 Y = (A * !B) + (!A * B)
 
 ```js
-if (true ^ false){ // půjde dale protože je to tru
+let a = true;
+let b = false;
+
+if ((a && ~b) || (~a && b)){ // půjde dale protože je to true
 
 }
 
-if (true ^ true){ // neprojde je to false 
+b = true
+
+if ((a && ~b) || (~a && b)){ // neprojde, protože je to false
 
 }
 ```
@@ -466,7 +472,7 @@ také je možný:
 
 Y = (!A * !B) + (A * B)
 
-BIN XNOR: `~(A ^ B)`
+**pozn. my jako programátoři si musíme udělat i XNOR protože XOR logická funkce v JS neexistuje, dá se udělat jako zápis Y*
 
 ## Funkce
 
@@ -579,7 +585,7 @@ while (i < 10){
 Tento cyklus (`do ... while`) se vždy spustí aspoň jednou a po prvním projití (iteraci) se zkontroluje podmínka a bude se opakovat dokud je podmínka true až je false přestane.
 
 ```js
-var i = 0
+let i = 0
 do{
     console.log(i)
     i++
@@ -587,7 +593,7 @@ do{
 
 // vypíše 0 až 9
 
-var j = 10
+let j = 10
 
 do{
     console.log(j)
@@ -602,7 +608,7 @@ do{
 K OOP (objektově orientované programování) a objektům se dostaneme později ale kdyby jsme chtěli vypsat vlastnosti a jejich hodnoty od nějakého objektu jedna z možností je využít Cyklus na procházení vlastností objektu (`for ... in`) cyklus.
 
 ```js
-var obj = {jmeno: "Petr", vek: 25}
+let obj = {jmeno: "Petr", vek: 25}
 for (let keyValues in obj){
     console.log(keyValues, obj[keyValues])
 }
@@ -624,7 +630,7 @@ Tento cyklus může procházet iterovatelné objekty (to jsou objekty jako strin
 **pozn.0 seznamy a pole jsou skoro to stejné v kontextu JS je možné je prohodit, takže někde bude napsané pole a někde seznam ale je to to stejné*
 
 ```js
-var seznam = [1, 2, 3, 4, 5];
+let seznam = [1, 2, 3, 4, 5];
 for (let index of seznam) {
   console.log(index);
 } // vypíše (každá hodnota bude na novém řádku): 1 2 3 4 5 
@@ -635,7 +641,7 @@ for (let index of seznam) {
 Seznam je datový typ proměnné, který umožňuje uložit více dat do jedné proměnné, proměnné nemusí mít ani stejný datový typ, takže tam může být string, int apod. Seznamy jsou indexované, první index je 0 a poslední je `n-1`, přičemž n je počet prvků v seznamu, tudíž je možné procházet pole pomocí indexů (název proměnné + hranaté závorky + čísla. např seznam[0] je prvek na indexu 0 atd.).
 
 ```js
-var seznam = [0,5,7,"Ahoj",["seznam", "pole"], 0.54]
+let seznam = [0,5,7,"Ahoj",["seznam", "pole"], 0.54]
 console.log(seznam[0]) // 0
 console.log(seznam[2]) // 7
 
@@ -655,7 +661,7 @@ Chtěl bych napsat zde pár důležitých metod a funkcí před začátkem OOP p
 Prompt je funkce, která vyzve uživatele aby odpověděl na otázku co mu programátor (my) zadáme.
 
 ```js
-var x = prompt("jaké je dneska počasí?");
+let x = prompt("jaké je dneska počasí?");
 
 console.log(x);
 
@@ -663,7 +669,7 @@ console.log(x);
 Při výstupu můžu vyjít cokoliv, protože uživatel může žádat cokoliv s vstup
 není nijak ošetřen. Na ošetření vstupu se používá while / do ... while cyklus
 */
-var y = 0;
+let y = 0;
 while (y == 0 || y == 5){
     y = prompt("zadej číslo mimo 0 a 5")
 
@@ -684,7 +690,7 @@ udělá to že se stránka zeptá znovu. Tady nám nevadí že prompt vrací str
 
 <!-- nebo se také dá psát přímo do script tagu -->
 <script>
-var num = 0;
+let num = 0;
 num++;
 </script>
 ```
@@ -696,14 +702,14 @@ Number je konstruktor třídy `Number()`, když si něho zavoláme string obsahu
 **pozn. když ho zavoláme s neplatným string hodnot vrátí "NaN" - Not a Number*
 
 ```js
-var x = "1234";
+let x = "1234";
 x = Number(x)
 
 /*
 převede x z textu "1234" na celé číslo 1234
 */
 
-var y = 0.5;
+let y = 0.5;
 y = Number(y)
 
 /*
@@ -716,9 +722,9 @@ převede y na desetinné číslo 0.5
 `ParseInt` a `parseFloat` jsou funkce co dělají podobnou věc, jedna převede na `int` (parseInt) a jedna převede na `float` (parseFloat) - Number (int) s desetinou čárkou.
 
 ```js
-var x = "15.5";
-var y = 17.3;
-var z = 13
+let x = "15.5";
+let y = 17.3;
+let z = 13
 
 x = parseInt(x) // x je 15 protože se převádí na celé číslo 
 y = parseFloat(y) // žádná změna 
