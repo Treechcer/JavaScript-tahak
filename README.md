@@ -476,7 +476,7 @@ Y = (!A * !B) + (A * B)
 
 ## Funkce
 
-S funkcemi jsme se setkali už na začátku s funkcí "console.log()" (pro upřesnění, console.log() je metoda ale v tomto případě to nevadí, metody jsou potom v OOP). Funkce je část kódu, která se dá znovu zavolat pomocí jejího jména a pokud přijímá nějaké parametry tak její název se doplní parametry v závorce, která je prázdná a musí tam být když tam nejosu parametry. Funkce dokud nebude zavolaná nic neudělá, bude jenom "přehlédnuta počítačem" dokud ji nezavoláme.
+S funkcemi jsme se setkali už na začátku s funkcí "console.log()" (pro upřesnění, console.log() je metoda ale v tomto případě to nevadí, metody jsou potom v OOP). Funkce je část kódu, která se dá znovu zavolat pomocí jejího jména a pokud přijímá nějaké parametry tak její název se doplní parametry v závorce, která je prázdná a musí tam být když tam nejsou parametry. Funkce dokud nebude zavolaná nic neudělá, bude jenom "přehlédnuta počítačem" dokud ji nezavoláme.
 
 ```js
 function nazev(){ //vytvoření funkce bez parametrů
