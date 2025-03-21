@@ -6,6 +6,7 @@
 - [x] větvení
 - [x] funkce
 - [x] cykly
+- [ ] DOM (Document Object Model)
 - [x] vysvětlení OOP
 - [x] základy OOP
 - [ ] pokročilejší OOP
@@ -731,6 +732,12 @@ y = parseFloat(y) // žádná změna
 y = parseInt(y) // y je 17
 z = parseFloat(z) // z je 13 protože je to celé číslo a nemá desetinné místo 
 ```
+# DOM (Document Object Model)
+
+DOM nám dovoluje upravovat HTML stránku. Všechno v HTML souboru je v hierarchii kde head je nejvýše a všechno vychází z head, vypadá to nějak takto:
+
+
+Document ├── html │   ├── head │   │   ├── title │   │   └── meta │   └── body │       ├── header │       ├── main │       │   ├── section │       │   │   ├── h1 │       │   │   └── p │       ├── aside │       └── footer
 
 # OOP (Objektově Orientované Programování)
 
