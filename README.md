@@ -739,10 +739,8 @@ DOM nám dovoluje upravovat HTML stránku. Všechno v HTML souboru je v hierarch
 
 Document
 
-├── HTML
-
-│   ├── head (hlavička dokumentu)
-
+├── HTML <br>
+│   ├── head (hlavička dokumentu) <br>
 │   │   ├── title (titulek / název)
 
 │   │   └── meta (meta infromacs)
