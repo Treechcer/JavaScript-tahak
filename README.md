@@ -738,17 +738,29 @@ DOM nám dovoluje upravovat HTML stránku. Všechno v HTML souboru je v hierarch
 
 
 Document
+
 ├── HTML
+
 │   ├── head (hlavička dokumentu)
+
 │   │   ├── title (titulek / název)
+
 │   │   └── meta (meta infromacs)
+
 │   └── body (tělo / obsah)
+
 │       ├── header (hlavička / záhlaví)
+
 │       ├── main (hlavní obsah)
+
 │       │   └── section (sekce)
+
 │       │       ├── h1 (nadpis 1)
+
 │       │       └── p (paragraf)
+
 │       ├── aside (boční panel)
+
 │       └── footer (patička / zápatí)
 
 
