@@ -734,7 +734,7 @@ z = parseFloat(z) // z je 13 protože je to celé číslo a nemá desetinné mí
 ```
 # DOM (Document Object Model)
 
-DOM nám dovoluje upravovat HTML stránku. Všechno v HTML souboru je v hierarchii kde head je nejvýše a všechno vychází z head, vypadá to nějak takto:
+DOM nám dovoluje upravovat `HTML stránku`. Všechno v HTML souboru je v `hierarchii` kde head je nejvýše a všechno vychází z head, vypadá to nějak takto:
 
 
 Document
@@ -752,7 +752,23 @@ Document
 │       ├── aside (boční panel)<br>
 │       └── footer (patička / zápatí)<br>
 
+## Hledání prvků v DOM
 
+K HTML prvkům se můžeme dostat více způsoby. Můžeme způsoby na hledání těchto prvků rozdělit na dva zpusoby, první a to ta, která vraci pouze jeden prvek a druhou, která vrací všechny. 
+
+## Metody vracející jeden prvek
+
+`document.getElementByID(ID prvku)` je nejjednodušší způsob na hledání prvků v HTML, protože vždy vrací `pouze jeden` a to ten, který má ID, které tam dáme do závorky. 
+
+**pozn.0 protože v HTML by se `ID nemělo opakovat` (i když to jde ale není to dobré), tak to vrátí `pouze první výskyt toho ID`*
+
+`document.querySelector(selector)` je metoda, která vyhledává podle žádného selectoru (tabulka níže), kde vrátí první prvek se shodou selectoru. 
+
+**pozn.1 když hledaný prvek neexistuje metoda vrací `null`*
+
+|Selector|Popis|
+|--------|-----|
+|"#ID"   |vybere prvek podle ID|
 
 # OOP (Objektově Orientované Programování)
 
