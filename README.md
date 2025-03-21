@@ -769,6 +769,35 @@ K HTML prvkům se můžeme dostat více způsoby. Můžeme způsoby na hledání
 |Selector|Popis|
 |--------|-----|
 |"#ID"   |vybere prvek podle ID|
+|".class"|vybere prvek podle třídy|
+|"tag"|vybere první prvek podle tagu|
+|"parent child"| vybere prvního potomka daného rodiče|
+
+**pozn.2 jsou i další ale ty nejsou zas tak důležité*
+
+Pro použití více selectorů najednou se to odděluje pouze čárku, jako např. `document.querySelector("#ID, tag")`.
+
+### "#ID"
+
+`document.querySelector("#ID")` je vlastně stejný jako getElementByID(), takže vráti prvek s daným ID.
+
+### ".class"
+
+`document.querySelector(".class")` vrátí první prvek s danou třídou / class.
+
+### "tag"
+
+`document.querySelector("tag")` vrací první prvek s daným HTML tagem (např. `<p>`, `<h1>` apod.), což toto je spíše vyhledávání využité s kombinací jiných selectorů.
+
+### parent child 
+
+`document.querySelector("parent child")` vrací první prvek co je potomek (child) od nějakého rodiče (patent), nejčastěji využívány v kombinaci s dalšími selectory.
+
+## Metody vracející více než jeden prvek
+
+.
+.
+.
 
 # OOP (Objektově Orientované Programování)
 
