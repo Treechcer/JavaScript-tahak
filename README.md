@@ -737,7 +737,21 @@ z = parseFloat(z) // z je 13 protože je to celé číslo a nemá desetinné mí
 DOM nám dovoluje upravovat HTML stránku. Všechno v HTML souboru je v hierarchii kde head je nejvýše a všechno vychází z head, vypadá to nějak takto:
 
 
-Document ├── html │   ├── head │   │   ├── title │   │   └── meta │   └── body │       ├── header │       ├── main │       │   ├── section │       │   │   ├── h1 │       │   │   └── p │       ├── aside │       └── footer
+Document
+├── HTML
+│   ├── head (hlavička dokumentu)
+│   │   ├── title (titulek / název)
+│   │   └── meta (meta infromacs)
+│   └── body (tělo / obsah)
+│       ├── header (hlavička / záhlaví)
+│       ├── main (hlavní obsah)
+│       │   └── section (sekce)
+│       │       ├── h1 (nadpis 1)
+│       │       └── p (paragraf)
+│       ├── aside (boční panel)
+│       └── footer (patička / zápatí)
+
+
 
 # OOP (Objektově Orientované Programování)
 
