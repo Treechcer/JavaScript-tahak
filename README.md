@@ -741,25 +741,16 @@ Document
 
 ├── HTML <br>
 │   ├── head (hlavička dokumentu) <br>
-│   │   ├── title (titulek / název)
-
-│   │   └── meta (meta infromacs)
-
-│   └── body (tělo / obsah)
-
-│       ├── header (hlavička / záhlaví)
-
-│       ├── main (hlavní obsah)
-
-│       │   └── section (sekce)
-
-│       │       ├── h1 (nadpis 1)
-
-│       │       └── p (paragraf)
-
-│       ├── aside (boční panel)
-
-│       └── footer (patička / zápatí)
+│   │   ├── title (titulek / název) <br>
+│   │   └── meta (meta infromacs)<br>
+│   └── body (tělo / obsah)<br>
+│       ├── header (hlavička / záhlaví)<br>
+│       ├── main (hlavní obsah)<br>
+│       │   └── section (sekce)<br>
+│       │       ├── h1 (nadpis 1)<br>
+│       │       └── p (paragraf)<br>
+│       ├── aside (boční panel)<br>
+│       └── footer (patička / zápatí)<br>
 
 
 
