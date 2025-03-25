@@ -801,8 +801,6 @@ Pro použití více selektorů najednou se neodděluje nijak, s oddělením čá
 
 ### "#ID"
 
----
-
 `document.querySelector("#ID")` je vlastně stejný jako `getElementByID()`, takže vráti prvek s daným ID.
 
 ```js
