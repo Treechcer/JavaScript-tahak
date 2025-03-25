@@ -6,7 +6,8 @@
 - [x] větvení
 - [x] funkce
 - [x] cykly
-- [ ] DOM (Document Object Model)
+- [x] DOM (Document Object Model)
+- [ ] RegEx (regulární exprese)
 - [x] vysvětlení OOP
 - [x] základy OOP
 - [ ] pokročilejší OOP
@@ -55,7 +56,15 @@
     - [".class"](#class)
     - ["tag"](#tag)
     - [parent child](#parent-child)
-  - [rozdělování a nerozdělování rozdíl](#rozdělování-a-nerozdělování-rozdíl)
+  - [rozdělování čárkou a nerozdělování rozdíl](#rozdělování-čárkou-a-nerozdělování-rozdíl)
+  - [hledání prvků v dom](#hledání-prvků-v-dom-1)
+    - [další metody](#další-metody)
+  - [tabulka všech metod k shánění elementů z DOM](#tabulka-všech-metod-k-shánění-elementů-z-dom)
+    - [query selektory](#query-selektory)
+    - [getElementBy..()](#getelementby)
+  - [Důležité metody pro interakci s DOM](#důležité-metody-pro-interakci-s-dom)
+- [přidání interaktivity na stránku](#přidání-interaktivity-na-stránku)
+  - [další vlastnosti](#další-vlastnosti)
 - [OOP (Objektově Orientované Programování)](#oop-objektově-orientované-programování)
   - [Začátek OOP](#začátek-oop)
 
@@ -840,7 +849,7 @@ Pro použití více selektorů najednou se neodděluje nijak, s oddělením čá
 Tento kód vyhledává první paragraf v divu v celém HTML a pak ho vrátí.
 
 
-## rozdělování a nerozdělování rozdíl
+## rozdělování čárkou a nerozdělování rozdíl
 
 Při použití `document.querySelector()` můžeme dát do závor `"#cislo, p"`, `"#cislo p"` tak i dokonce `"p#cislo"`. Rozdíl v tom jsou že:
     - `"#cislo, p"` znamená že hledáme prvek co je buď `paragraf` (neboli p) a `nebo` má ID `cislo`
@@ -848,6 +857,111 @@ Při použití `document.querySelector()` můžeme dát do závor `"#cislo, p"`,
     - `"p#cislo"` znamená že hledáme prvek co ve stejnou chvíli `paragraf` (p) `a taky` má ID `cislo`
 
 **pozn. `"p#cislo"` nelze zapsat jako `"#cislop"`, protože tak by to hledalo prvek s ID `cislop`*
+
+## hledání prvků v dom
+
+Metody, jako např `document.querySelectorAll()` vrací více než jeden prvek, vrací přesně NodeList, který se chová jako pole / seznam. Tato metoda je stejná jako `querySelector()` ale vrací všechny prvky a ne jenom jeden, které se dají upravovat stejně jako prvky z těch ostatní metod.
+
+```js
+//příklad použití
+
+    let prvky = document.querySelectorAll(".trida"); // všechny prvky co mají třídu "trida" se uloží to seznamu "prvky"
+    for(let prvek of prvky){ //půjdeme od prvního (nultého) prvku do posledního prvku n-1 (m je délka pole)
+        prvek.style.color = "blue"; // všem těmto prvkům změníme barvu na modrou 
+    }
+```
+
+Metoda `document.querySelectorAll()` zase může mít stejné selektory jako `document.querySelector()` ale rozdíl je ten že vrátí všechny prvky místo prvního.
+
+### další metody
+
+`document.getElementsByClassName(trida)` tato metoda vrací všechny prvky podle zadané třídy v závorkách. `document.getElementsByTagName(tag)` tato metoda vrací všechny prvky podle zadaného HTML tagu v závorkách. `document.getElementsByName(name)` tato metoda vrací všechny prvky co mají stejný atribut `name`.
+
+## tabulka všech metod k shánění elementů z DOM
+
+### query selektory
+
+|metoda|popis|
+|:-------|:--------|
+|document.querySelector(selektor) | Vybere a vrátí první |odpovídající prvek|
+|document.querySelectorAll(selektor) | vybere všechny prvky a vrátí je |
+
+### getElementBy..()
+
+|metoda|popis|
+|:-------|:--------|
+|document.getElementById(id)|Vybere a vrátí první prvek s tímto ID (ID by se nemělo opakovat)|
+|document.getElementsByClassName(trida)|Vybere a vrátí první prvek s touto třídou|
+|document.getElementsByTagName(tag)|Vybere a vrátí první prvek s tímto HTML tagem|
+|document.getElementsByName(name)|Vybere a vrátí první prvek s tímto specifickým name atributem|
+
+**pozn. v těchto metodách se nepoužívají pro ID `#`, pro třídy `.` apod. protože už pro JS je jasné co má hledat a proto není třeba to upřesňovat selektory*
+
+## Důležité metody pro interakci s DOM
+
+Pro úpravu jakéhokoliv HTML tagu je důležité znát metody jak s je upravovat.
+
+O první takovéto metodě jsme tady už mluvili, bylo to `/.style.color` např. pro úpravu barvy, pozadí. Lze takto měnit úplně všechno co je v HTML pod `<style>` tagem.
+
+```HTML
+<!--> nějaký HTML kód <--->
+<p id="paragraf"> Ahoj </p>
+<!--> nějaký HTML kód <--->
+```
+
+```js
+document.getElementByID("paragraf").style.color = "green" //nastaví barvu na zelenou
+document.getElementByID("paragraf").style.backgroundColor = "red" //nastaví barvu pozadí na červenou
+```
+
+Mezi další důležité metody patří `innerHTML` a `textContent`, tyto metody dělají dost podobnou věc, upravují text HTML tagu ale obě jinak. `innerHTML` je dobrý pokud potřebujeme manipulovat s HTML obsahem, protože dokáže přidat další HTML tagy, upravit strukturu apod. `textContent` dokáže pouze upravovat text toho prvku.
+
+```HTML
+<!--> nějaký HTML kód <--->
+<p id="paragraf"> Ahoj </p>
+<!--> nějaký HTML kód <--->
+```
+
+```js
+document.getElementByID("paragraf").textContent = "Čau!" // změní paragraf z "Ahoj" na "Čau!"
+```
+
+# přidání interaktivity na stránku
+
+Přidání interaktivity můžeme dosáhnout například tím že přidáme události (events) nebo vlastností, protože events jsou složitější téma, tak je pro zatím vynecháme a půjdeme na vlastnosti. Vlastnosti se dají přidat jak v HTML tak i v JS, příklad obou chvíli:
+
+HTML
+```HTML
+<!-- > do názvu funkce dodáme nějakou funkci z našeho script <--->
+<p onclick="názevFunkce()">
+```
+
+JS
+```JS
+let prvek = document.getElementByID("ID")
+prvek.onclick = názevFunkce //bez závorek, protože s nimi by se ta funkce zavolala hned při spuštění stránky, což nechceme
+
+//protože nemůžeme použít závorky, a tam dát parametry co ta funkce přijímá můžeme to udělat takto
+
+prvek.onclick = () => {
+    názevFunkce(argumenty)
+}
+
+//pravděpodobně je více způsobů ale myslím si že tento je nejlehčí
+```
+
+## další vlastnosti
+
+|vlastnost|popis|
+|:---------|:-------|
+|onclick|spustí se vždy při kliknutí prvku|
+|ondblclick|spustí se vždy při dvojitém kliknutí|
+|onmousedown|spustí se vždy při kliknutí na prvku, spustí se hned po stisknutí ne jak u `onclick` že se spustí po puštění tlačítka|
+|onmouseover|spustí se vždy při to co je kurzor v oblasti prvku|
+|onmouseleave|spustí se vždy když kurzor opustí prvek|
+|onscroll|spustí se vždy posouvání obsahu stránky nebo prvku|
+
+samozřejmě je více vlastností co můžeme přidat k HTML prvkům ale toto si myslím že jsou nejdůležitější 
 
 # OOP (Objektově Orientované Programování)
 
