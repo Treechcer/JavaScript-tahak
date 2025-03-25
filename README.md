@@ -801,6 +801,8 @@ Pro použití více selektorů najednou se neodděluje nijak, s oddělením čá
 
 ### "#ID"
 
+---
+
 `document.querySelector("#ID")` je vlastně stejný jako `getElementByID()`, takže vráti prvek s daným ID.
 
 ```js
@@ -810,6 +812,8 @@ Pro použití více selektorů najednou se neodděluje nijak, s oddělením čá
 **pozn. je stejný pouze pokud použijeme jenom ID, což `querySelector` umí i více najednou, tak má více možnost*
 
 ### ".class"
+
+---
 
 `document.querySelector(".class")` vrátí první prvek s danou třídou / class.
 
@@ -821,6 +825,8 @@ Pro použití více selektorů najednou se neodděluje nijak, s oddělením čá
 
 ### "tag"
 
+---
+
 `document.querySelector("tag")` vrací první prvek s daným HTML tagem (např. `<p>`, `<h1>` apod.), což toto je spíše vyhledávání využité s kombinací jiných selektorů.
 
 ```js
@@ -830,6 +836,8 @@ Pro použití více selektorů najednou se neodděluje nijak, s oddělením čá
 **pozn. může to být jakýkoli tag v HTML*
 
 ### parent child 
+
+---
 
 `document.querySelector("parent child")` vrací první prvek co je potomek (child) od nějakého rodiče (patent), nejčastěji využívány v kombinaci s dalšími selektory.
 
