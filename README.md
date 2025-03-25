@@ -47,6 +47,15 @@
     - [prompt()](#prompt)
     - [Number()](#number)
     - [parseInt() a parseFloat()](#parseint-a-parsefloat)
+- [DOM (Document Object Model)](#dom-document-object-model)
+  - [Hledání prvků v DOM](#hledání-prvků-v-dom)
+    - [Jedno selektorové metody](#jedno-selektorové-metody)
+    - [více selektorové vyhledávání](#více-selektorové-vyhledávání)
+      - ["#ID"](#id)
+      - [".class"](#class)
+      - ["tag"](#tag)
+      - [parent child](#parent-child)
+  - [rozdělování a nerozdělování rozdíl](#rozdělování-a-nerozdělování-rozdíl)
 - [OOP (Objektově Orientované Programování)](#oop-objektově-orientované-programování)
   - [Začátek OOP](#začátek-oop)
 
@@ -734,7 +743,7 @@ z = parseFloat(z) // z je 13 protože je to celé číslo a nemá desetinné mí
 ```
 # DOM (Document Object Model)
 
-DOM nám dovoluje upravovat `HTML stránku`. Všechno v HTML souboru je v `hierarchii` kde head je nejvýše a všechno vychází z head, vypadá to nějak takto:
+DOM nám dovoluje upravovat `HTML stránku`. Všechno v HTML souboru je v `hierarchii` kde `head` je nejvýše a všechno vychází z něho, vypadá to nějak takto:
 
 
 Document
@@ -742,7 +751,7 @@ Document
 ├── HTML <br>
 │   ├── head (hlavička dokumentu) <br>
 │   │   ├── title (titulek / název) <br>
-│   │   └── meta (meta infromacs)<br>
+│   │   └── meta (meta informace)<br>
 │   └── body (tělo / obsah)<br>
 │       ├── header (hlavička / záhlaví)<br>
 │       ├── main (hlavní obsah)<br>
@@ -754,15 +763,28 @@ Document
 
 ## Hledání prvků v DOM
 
-K HTML prvkům se můžeme dostat více způsoby. Můžeme způsoby na hledání těchto prvků rozdělit na dva zpusoby, první a to ta, která vraci pouze jeden prvek a druhou, která vrací všechny. 
+K HTML prvkům se můžeme dostat více způsoby. Můžeme způsoby na hledání těchto prvků rozdělit na dva zpusoby, první hledající pouze podle jednoho selektoru (vstupů, napr. ID, třída apod.) nebo těch co hledají podle více.
 
-## Metody vracející jeden prvek
+### Jedno selektorové metody
 
-`document.getElementByID(ID prvku)` je nejjednodušší způsob na hledání prvků v HTML, protože vždy vrací `pouze jeden` a to ten, který má ID, které tam dáme do závorky. 
+`document.getElementByID(ID prvku)` je nejjednodušší způsob na hledání prvků v HTML, protože by měl vracet `pouze jeden` a to ten, který má ID, které tam dáme do závorky. 
 
-**pozn.0 protože v HTML by se `ID nemělo opakovat` (i když to jde ale není to dobré), tak to vrátí `pouze první výskyt toho ID`*
+**pozn.0 protože v HTML by se `ID nemělo opakovat` (i když to jde ale není to dobré, takže ho `neopakujte`), tak to vrátí `pouze první výskyt toho ID`, proto je dobré mít pouze jeden*
 
-`document.querySelector(selector)` je metoda, která vyhledává podle žádného selectoru (tabulka níže), kde vrátí první prvek se shodou selectoru. 
+```html
+    <!---> nějaký HTML kód <--->
+    <p id="paragraf1"> já jsem paragraf 1 </p>
+    <!---> nějaký HTML kód <--->
+```
+
+```js
+    let p1 = document.getElementByID("paragraf1"); // vyhledá element s ID paragraf1 a uloží ho do proměnné p1 pomocí, které můžeme upravovat pak ten paragraf
+    p.style.color = "blue"; // nastaví barvu na modrou pro paragraf1, může dělat více věcí ale to je asi nejlehčí na zobrazení
+```
+
+### více selektorové vyhledávání
+
+`document.querySelector(selector)` je metoda, která vyhledává podle žádného selektoru (tabulka níže), kde vrátí první prvek se shodou selektoru. 
 
 **pozn.1 když hledaný prvek neexistuje metoda vrací `null`*
 
@@ -775,29 +797,57 @@ K HTML prvkům se můžeme dostat více způsoby. Můžeme způsoby na hledání
 
 **pozn.2 jsou i další ale ty nejsou zas tak důležité*
 
-Pro použití více selectorů najednou se to odděluje pouze čárku, jako např. `document.querySelector("#ID, tag")`.
+Pro použití více selektorů najednou se neodděluje nijak, s oddělením čárkou nebo mezerou to není to stejné ale k tomu později, jako např. `document.querySelector("#IDtag")`.
 
-### "#ID"
+#### "#ID"
 
-`document.querySelector("#ID")` je vlastně stejný jako getElementByID(), takže vráti prvek s daným ID.
+`document.querySelector("#ID")` je vlastně stejný jako `getElementByID()`, takže vráti prvek s daným ID.
 
-### ".class"
+```js
+    document.querySelector("#paragraf1")
+```
+
+**pozn. je stejný pouze pokud použijeme jenom ID, což `querySelector` umí i více najednou, tak má více možnost*
+
+#### ".class"
 
 `document.querySelector(".class")` vrátí první prvek s danou třídou / class.
 
-### "tag"
+```js
+    document.querySelector(".třída")
+```
 
-`document.querySelector("tag")` vrací první prvek s daným HTML tagem (např. `<p>`, `<h1>` apod.), což toto je spíše vyhledávání využité s kombinací jiných selectorů.
+**pozn. není stejné jako `document.getElementsByClassName` protože ten vrací všechny prvky na rozdíl od `querySelector` ale k getElementsByClassName později*
 
-### parent child 
+#### "tag"
 
-`document.querySelector("parent child")` vrací první prvek co je potomek (child) od nějakého rodiče (patent), nejčastěji využívány v kombinaci s dalšími selectory.
+`document.querySelector("tag")` vrací první prvek s daným HTML tagem (např. `<p>`, `<h1>` apod.), což toto je spíše vyhledávání využité s kombinací jiných selektorů.
 
-## Metody vracející více než jeden prvek
+```js
+    document.querySelector("p")
+```
 
-.
-.
-.
+**pozn. může to být jakýkoli tag v HTML*
+
+#### parent child 
+
+`document.querySelector("parent child")` vrací první prvek co je potomek (child) od nějakého rodiče (patent), nejčastěji využívány v kombinaci s dalšími selektory.
+
+```js
+    document.querySelector("div p")
+```
+
+Tento kód vyhledává první paragraf v divu v celém HTML a pak ho vrátí.
+
+
+## rozdělování a nerozdělování rozdíl
+
+Při použití `document.querySelector()` můžeme dát do závor `"#cislo, p"`, `"#cislo p"` tak i dokonce `"p#cislo"`. Rozdíl v tom jsou že:
+    - `"#cislo, p"` znamená že hledáme prvek co je buď `paragraf` (neboli p) a `nebo` má ID `cislo`
+    - `"#cislo p"` znamená že hledáme prvek, který je `paragraf` (p) `a` je potom nějakého prvku s ID `cislo`
+    - `"p#cislo"` znamená že hledáme prvek co ve stejnou chvíli `paragraf` (p) `a taky` má ID `cislo`
+
+**pozn. `"p#cislo"` nelze zapsat jako `"#cislop"`, protože tak by to hledalo prvek s ID `cislop`*
 
 # OOP (Objektově Orientované Programování)
 
