@@ -811,8 +811,6 @@ Pro použití více selektorů najednou se neodděluje nijak, s oddělením čá
 
 ### ".class"
 
----
-
 `document.querySelector(".class")` vrátí první prvek s danou třídou / class.
 
 ```js
@@ -823,8 +821,6 @@ Pro použití více selektorů najednou se neodděluje nijak, s oddělením čá
 
 ### "tag"
 
----
-
 `document.querySelector("tag")` vrací první prvek s daným HTML tagem (např. `<p>`, `<h1>` apod.), což toto je spíše vyhledávání využité s kombinací jiných selektorů.
 
 ```js
@@ -834,8 +830,6 @@ Pro použití více selektorů najednou se neodděluje nijak, s oddělením čá
 **pozn. může to být jakýkoli tag v HTML*
 
 ### parent child 
-
----
 
 `document.querySelector("parent child")` vrací první prvek co je potomek (child) od nějakého rodiče (patent), nejčastěji využívány v kombinaci s dalšími selektory.
 
