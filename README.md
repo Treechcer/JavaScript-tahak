@@ -48,13 +48,13 @@
     - [Number()](#number)
     - [parseInt() a parseFloat()](#parseint-a-parsefloat)
 - [DOM (Document Object Model)](#dom-document-object-model)
-  - [Hledání prvků v DOM](#hledání-prvků-v-dom)
-    - [Jedno selektorové metody](#jedno-selektorové-metody)
-    - [více selektorové vyhledávání](#více-selektorové-vyhledávání)
-      - ["#ID"](#id)
-      - [".class"](#class)
-      - ["tag"](#tag)
-      - [parent child](#parent-child)
+- [Hledání prvků v DOM](#hledání-prvků-v-dom)
+  - [Jedno selektorové metody](#jedno-selektorové-metody)
+  - [více selektorové vyhledávání](#více-selektorové-vyhledávání)
+    - ["#ID"](#id)
+    - [".class"](#class)
+    - ["tag"](#tag)
+    - [parent child](#parent-child)
   - [rozdělování a nerozdělování rozdíl](#rozdělování-a-nerozdělování-rozdíl)
 - [OOP (Objektově Orientované Programování)](#oop-objektově-orientované-programování)
   - [Začátek OOP](#začátek-oop)
@@ -761,11 +761,11 @@ Document
 │       ├── aside (boční panel)<br>
 │       └── footer (patička / zápatí)<br>
 
-## Hledání prvků v DOM
+# Hledání prvků v DOM
 
 K HTML prvkům se můžeme dostat více způsoby. Můžeme způsoby na hledání těchto prvků rozdělit na dva zpusoby, první hledající pouze podle jednoho selektoru (vstupů, napr. ID, třída apod.) nebo těch co hledají podle více.
 
-### Jedno selektorové metody
+## Jedno selektorové metody
 
 `document.getElementByID(ID prvku)` je nejjednodušší způsob na hledání prvků v HTML, protože by měl vracet `pouze jeden` a to ten, který má ID, které tam dáme do závorky. 
 
@@ -782,7 +782,7 @@ K HTML prvkům se můžeme dostat více způsoby. Můžeme způsoby na hledání
     p.style.color = "blue"; // nastaví barvu na modrou pro paragraf1, může dělat více věcí ale to je asi nejlehčí na zobrazení
 ```
 
-### více selektorové vyhledávání
+## více selektorové vyhledávání
 
 `document.querySelector(selector)` je metoda, která vyhledává podle žádného selektoru (tabulka níže), kde vrátí první prvek se shodou selektoru. 
 
@@ -799,7 +799,7 @@ K HTML prvkům se můžeme dostat více způsoby. Můžeme způsoby na hledání
 
 Pro použití více selektorů najednou se neodděluje nijak, s oddělením čárkou nebo mezerou to není to stejné ale k tomu později, jako např. `document.querySelector("#IDtag")`.
 
-#### "#ID"
+### "#ID"
 
 `document.querySelector("#ID")` je vlastně stejný jako `getElementByID()`, takže vráti prvek s daným ID.
 
@@ -809,7 +809,7 @@ Pro použití více selektorů najednou se neodděluje nijak, s oddělením čá
 
 **pozn. je stejný pouze pokud použijeme jenom ID, což `querySelector` umí i více najednou, tak má více možnost*
 
-#### ".class"
+### ".class"
 
 `document.querySelector(".class")` vrátí první prvek s danou třídou / class.
 
@@ -819,7 +819,7 @@ Pro použití více selektorů najednou se neodděluje nijak, s oddělením čá
 
 **pozn. není stejné jako `document.getElementsByClassName` protože ten vrací všechny prvky na rozdíl od `querySelector` ale k getElementsByClassName později*
 
-#### "tag"
+### "tag"
 
 `document.querySelector("tag")` vrací první prvek s daným HTML tagem (např. `<p>`, `<h1>` apod.), což toto je spíše vyhledávání využité s kombinací jiných selektorů.
 
@@ -829,7 +829,7 @@ Pro použití více selektorů najednou se neodděluje nijak, s oddělením čá
 
 **pozn. může to být jakýkoli tag v HTML*
 
-#### parent child 
+### parent child 
 
 `document.querySelector("parent child")` vrací první prvek co je potomek (child) od nějakého rodiče (patent), nejčastěji využívány v kombinaci s dalšími selektory.
 
