@@ -963,6 +963,10 @@ prvek.onclick = () => {
 
 samozřejmě je více vlastností co můžeme přidat k HTML prvkům ale toto si myslím že jsou nejdůležitější 
 
+# RegEx (regulární exprese)
+
+.
+
 # OOP (Objektově Orientované Programování)
 
 Objektově orientované programování (`OOP`) je programovací paradigma, které využívá `objekty`, `třídy`, `metody` apod. s objekty jsme se už setkali v dávnější kapitole o Cyklech s cyklem `for...in` ale to není všechno, většina proměnných je v JS je objekt nějaké třídy, například objekty typu `Object`, `Array`, `Function`, ale primitivní datové typy jako čísla nebo řetězce jsou zvláštní hodnoty, které nepatří přímo mezi objekty (primitivní datové typy). Každá třídu může mít pod sebou i metody (např. třída `console` a její metoda `log`, která přijímá nějaký string, co má vytisknout). V JS jsou dva hlavní způsoby jak si udělat objekt, jeden je pomocí `třídy` a `konstruktorů` a druhá je pomocí `deklarování` (založení) proměnné, která obsahuje nějaké `vlastnosti` a jejich `atributy` (k nim za chvíli).
