@@ -852,8 +852,11 @@ Tento kód vyhledává první paragraf v divu v celém HTML a pak ho vrátí.
 ## rozdělování čárkou a nerozdělování rozdíl
 
 Při použití `document.querySelector()` můžeme dát do závor `"#cislo, p"`, `"#cislo p"` tak i dokonce `"p#cislo"`. Rozdíl v tom jsou že:
+
     - `"#cislo, p"` znamená že hledáme prvek co je buď `paragraf` (neboli p) a `nebo` má ID `cislo`
+
     - `"#cislo p"` znamená že hledáme prvek, který je `paragraf` (p) `a` je potom nějakého prvku s ID `cislo`
+
     - `"p#cislo"` znamená že hledáme prvek co ve stejnou chvíli `paragraf` (p) `a taky` má ID `cislo`
 
 **pozn. `"p#cislo"` nelze zapsat jako `"#cislop"`, protože tak by to hledalo prvek s ID `cislop`*
