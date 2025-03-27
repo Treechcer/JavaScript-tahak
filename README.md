@@ -776,7 +776,7 @@ K HTML prvkům se můžeme dostat více způsoby. Můžeme způsoby na hledání
 
 ## Jedno selektorové metody
 
-`document.getElementByID(ID prvku)` je nejjednodušší způsob na hledání prvků v HTML, protože by měl vracet `pouze jeden` a to ten, který má ID, které tam dáme do závorky. 
+`document.getElementById(ID prvku)` je nejjednodušší způsob na hledání prvků v HTML, protože by měl vracet `pouze jeden` a to ten, který má ID, které tam dáme do závorky. 
 
 **pozn.0 protože v HTML by se `ID nemělo opakovat` (i když to jde ale není to dobré, takže ho `neopakujte`), tak to vrátí `pouze první výskyt toho ID`, proto je dobré mít pouze jeden*
 
@@ -787,7 +787,7 @@ K HTML prvkům se můžeme dostat více způsoby. Můžeme způsoby na hledání
 ```
 
 ```js
-    let p1 = document.getElementByID("paragraf1"); // vyhledá element s ID paragraf1 a uloží ho do proměnné p1 pomocí, které můžeme upravovat pak ten paragraf
+    let p1 = document.getElementById("paragraf1"); // vyhledá element s ID paragraf1 a uloží ho do proměnné p1 pomocí, které můžeme upravovat pak ten paragraf
     p.style.color = "blue"; // nastaví barvu na modrou pro paragraf1, může dělat více věcí ale to je asi nejlehčí na zobrazení
 ```
 
@@ -810,7 +810,7 @@ Pro použití více selektorů najednou se neodděluje nijak, s oddělením čá
 
 ### "#ID"
 
-`document.querySelector("#ID")` je vlastně stejný jako `getElementByID()`, takže vráti prvek s daným ID.
+`document.querySelector("#ID")` je vlastně stejný jako `getElementById()`, takže vráti prvek s daným ID.
 
 ```js
     document.querySelector("#paragraf1")
@@ -913,8 +913,8 @@ O první takovéto metodě jsme tady už mluvili, bylo to `/.style.color` např.
 ```
 
 ```js
-document.getElementByID("paragraf").style.color = "green" //nastaví barvu na zelenou
-document.getElementByID("paragraf").style.backgroundColor = "red" //nastaví barvu pozadí na červenou
+document.getElementById("paragraf").style.color = "green" //nastaví barvu na zelenou
+document.getElementById("paragraf").style.backgroundColor = "red" //nastaví barvu pozadí na červenou
 ```
 
 Mezi další důležité metody patří `innerHTML` a `textContent`, tyto metody dělají dost podobnou věc, upravují text HTML tagu ale obě jinak. `innerHTML` je dobrý pokud potřebujeme manipulovat s HTML obsahem, protože dokáže přidat další HTML tagy, upravit strukturu apod. `textContent` dokáže pouze upravovat text toho prvku.
@@ -926,7 +926,7 @@ Mezi další důležité metody patří `innerHTML` a `textContent`, tyto metody
 ```
 
 ```js
-document.getElementByID("paragraf").textContent = "Čau!" // změní paragraf z "Ahoj" na "Čau!"
+document.getElementById("paragraf").textContent = "Čau!" // změní paragraf z "Ahoj" na "Čau!"
 ```
 
 # přidání interaktivity na stránku
@@ -941,7 +941,7 @@ HTML
 
 JS
 ```JS
-let prvek = document.getElementByID("ID")
+let prvek = document.getElementById("ID")
 prvek.onclick = názevFunkce //bez závorek, protože s nimi by se ta funkce zavolala hned při spuštění stránky, což nechceme
 
 //protože nemůžeme použít závorky, a tam dát parametry co ta funkce přijímá můžeme to udělat takto
