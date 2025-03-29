@@ -65,6 +65,14 @@
   - [Důležité metody pro interakci s DOM](#důležité-metody-pro-interakci-s-dom)
 - [přidání interaktivity na stránku](#přidání-interaktivity-na-stránku)
   - [další vlastnosti](#další-vlastnosti)
+- [RegEx (regulární exprese)](#regex-regulární-exprese)
+  - [metody a využití RegEx](#metody-a-využití-regex)
+  - [match()](#match)
+  - [replace()](#replace)
+  - [search()](#search)
+  - [shrnutí metod pro RegEx](#shrnutí-metod-pro-regex)
+  - [Speciální znaky pro RegEx](#speciální-znaky-pro-regex)
+  - [pokročilé regEx znaky](#pokročilé-regex-znaky)
 - [OOP (Objektově Orientované Programování)](#oop-objektově-orientované-programování)
   - [Začátek OOP](#začátek-oop)
 
@@ -968,7 +976,109 @@ samozřejmě je více vlastností co můžeme přidat k HTML prvkům ale toto si
 
 # RegEx (regulární exprese)
 
-.
+RegEx neboli regulární exprese (výrazy) jsou určené k hledání `vzorů` v textu (`string`). Lze je iu využít k ověřování vstupů. Zapisují se pomocí `/` na začátku a na konci, vše mezi lomítky je vyhledávaný výraz, lze tam mít znaky (a,b,c.. 1,2,3.. apod.) a pak tam jsou znaky co mají nějaké speciální využití (k nim později).
+
+```js
+let RegEx = /abc/
+let RegEx1 = /car/
+```
+
+## metody a využití RegEx
+
+RegEx mají metody, které nám pomáhají hledat vzory, upravovat vstupy atd. Jedena z nejčastější metod je `.test()`, která "zkouší" jestli ten vstup v závorkách je pravdivý pro ten specifický RegEx.
+
+```js
+let regex = /abc/
+console.log(regex.test("acd")) //výstup: false
+console.log(regex.test("abc")) //výstup: true
+```
+
+## match()
+
+Další metodou je `.match()`, který hledá text podle RegEx a vrací pole s výsledky nebo `null` když nic nenajde.
+
+```js
+let vstup = "Je toto ale krásný den"
+let regex = /ale/
+console.log(vstup.match(regex))
+//[ 'ale', index: 8, input: 'Je toto ale krásný den', groups: undefined ]
+```
+
+## replace()
+
+Metoda `replace()` nahradí první nebo všechny výskyty, které odpovídají RegEx.
+
+
+```js
+let regEx = /koala/
+let vstup = "koala je zajímavé zvíře, koala.."
+console.log(vstup.replace(regEx, "kočka"))
+//výstup: "kočka je zajímavé zvíře, koala.."
+```
+
+Pokud chceme nahradit všechny výskyty můžeme použít `g` na konci RegEx. 
+
+```js
+let regEx = /koala/g
+let vstup = "koala je zajímavé zvíře, koala.."
+console.log(vstup.replace(regEx, "kočka"))
+//výstup: "kočka je zajímavé zvíře, kočka.."
+```
+
+## search()
+
+Metoda `search()` vrací první index prvního výskytu nebo `-1`, jestli tam není to co hledá.
+
+```js
+let regEx = /den/
+let vstup = "dneska je krásný den"
+console.log(vstup.search(regEx)) // výstup: 17
+```
+
+Příklad kdy se nenajde nic ve vstupu.
+
+```js
+let regEx = /pes/
+let vstup = "dneska je krásný den"
+console.log(vstup.search(regEx)) // výstup: -1
+```
+
+## shrnutí metod pro RegEx
+
+|metoda|význam|return|
+|:---------|:--------|:---------|
+|match()|hledá shodu textu s RegEx|výsledek (pole) nebo `nul`|
+|replace()|nahradí text podle RegEx|řetězec s nahrazením podle RegEx|
+|search()|hledá první výskyt|index výskytu nebo `-1`|
+
+## Speciální znaky pro RegEx
+
+Speciální znaky nám umožňují vyhledávat speciální sekvence znaků, můžeme díky nim přiblížit naše hledání ještě blíž.
+
+|znak|význam|příklad*y|
+|:----|:----|:-----|
+|`.`|tento znak znamená jakýkoliv až na nový řádek|`/a.a/` -> `aba`, `ada`..|
+|`^`|tento znak znamená že to co za ním následuje je na začátku řetězce|`/^ahoj/` -> `"ahoj kamarádi"` == `true`, `"něco ahoj"` == `false`|
+|`$`|tento znak znamená že to co je předním je na konci řetězce|`/ahoj$/` -> `"světe ahoj"` == `true`,`"ahoj světe"` == `false`|
+|`*`|tento znak znamená že znak předním se může opakovat 0 nebo více opakování (jiný znak udělá false)|`/ho*/` -> `"ho"`, `"h"`, `"hoo"`, `"ho7485"` == všechny `true`, `"he"`, `"hi"` == všechny `false`|
+|`+`|tento znak znamená že znak předním se musí opakovat minimálně jednou|`/ho+/` -> `"ho"`, `"hoo"` .. == všechny `true`, `"h"` == `false`| 
+|{n}| má přesně `n` počet opakování|`/o{2}/` -> `"oo"` == `true`, ostatní `false`|
+|{n,}|má alespoň `n` opakování|`/o{2,}/` -> `"oo"`, `"ooo"` == všechny `true`, ostatní `false`|
+|{n,m}|je tam mezi `n` a `m` opakování|`/o{2,3}/` -> `"oo"` a `"ooo"` true, ostatní `false`|
+|\ |tento znak nám dělá možné využít znaky bez jejich významu v RegEx|`/\./` -> `"."` ´´ `true`, ostatní `false`|
+
+## pokročilé regEx znaky
+
+|znak|význam|příklad*y|
+|:---|:---|:---|
+|\d|jakékoliv číslo `0-9`|`/\d/` -> `"123"` == `true` `"abc"` == `false`|
+|\D|jakékoliv znaky až na čísla|`/\D/` -> `"abc"` == `true`, `"132"` == `false` |
+|\w|alfanumerické znaky (`a-z`, `A-Z`, `0-9`, `_`)|`/\w+/` -> `"kočka_4554534"` == true|
+|\W|jakékoliv znaky až na alfanumerické|`/\W/` -> `"@&#"` == `true`, `"abcd"` == `false`|
+|\s|mezera, tab nebo nové řádky (white space)|`/\s/` -> `" "` == `true`|
+|\S|jakékoliv znaky mimo mezery, tab nebo nové řádky (white space)|`/\S+/` -> `"nějaký string"` == `true`|
+|\b|hranice slova|`/\bkat\b/` -> `"kat"` == `true`, `"kategorie"` == `false`|
+|\B|nehranice slova|`/\bkat\b/` -> `"kategorie"` == `true`, `"kat"` == `false`|
 
 # OOP (Objektově Orientované Programování)
 
