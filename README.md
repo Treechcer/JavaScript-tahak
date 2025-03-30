@@ -75,6 +75,13 @@
   - [pokročilé regEx znaky](#pokročilé-regex-znaky)
 - [OOP (Objektově Orientované Programování)](#oop-objektově-orientované-programování)
   - [Začátek OOP](#začátek-oop)
+  - [vytváření objektů (bez tříd)](#vytváření-objektů-bez-tříd)
+  - [vytváření objektů (s třídami)](#vytváření-objektů-s-třídami)
+- [čtyři hlavní pilíře OOP](#čtyři-hlavní-pilíře-oop)
+  - [Encapsulation (Zapouzdření)](#encapsulation-zapouzdření)
+  - [Abstraction (Abstrakce)](#abstraction-abstrakce)
+  - [Inheritance (Dědičnost)](#inheritance-dědičnost)
+  - [Polymorphism (Polymorfizmus)](#polymorphism-polymorfizmus)
 
 ## Úvod
 
@@ -1136,4 +1143,135 @@ a jeho vlastnosti "hodnota" s atributem "vnitrni hodnota".
 
 Kdyby tam v objektu byl další objekt budeme postupovat stejně abychom ho mohli použít.
 */
+```
+
+## vytváření objektů (bez tříd)
+
+V JS je více způsobů jak zakládat `objekty`, první z nich je použít funkci jako třídu, tato metoda dokáže skoro všechno co použití `tříd`. Tato metoda plýtvá více pamětí a je náročnější ale pokud děláme pouze pár objektů tak to nevadí.  
+
+```js
+function clovek(vek, jmeno){ //založení funkce, neboli konstrukteru (constructor)
+    let osoba = { // založení objektu
+        vek : vek, //nastavení věku podle vstupu
+        jmeno : jmeno,
+        pozdrav(){ //založení funkce (metody) pro tento specifický objekt, tata metoda při každém zavoláním vypíše "ahoj Pavel", pokud jméno je Pavel
+            console.log("ahoj", osoba.jmeno)
+        }
+    }
+    
+    return osoba //vrátí objekt
+}
+
+let osoba = clovek(19, "Pavel") //zavolání konstruktoru
+osoba.pozdrav() // zavolání metody "pozdrav" z objektu
+console.log(osoba.vek) //vypíše proměnnou věk objektu
+```
+
+**pozn. `dědičnost` je možná i s tímto způsobem ale je to zbytečně složité, takže doporučuji využít `třídy` / `class`, které vysvětluji v další kapitole.
+
+## vytváření objektů (s třídami)
+
+V JS můžeme používat i třídy, které používají klíčové slovo `class` a název této třídy. Konstruktor třídy má klíčové slovo `constructor` a přijímá všechny proměnné, které potřebujeme. metody se definují jako `nazev(){}` neboli stejně jako funkce ale bez klíčového slova `function`. V třídách se používá klíčové slovo `this`, které je k tomu abychom mohli ukazovat na objekt se kterým pracujeme. Při zakládání objektu tímto způsobem, tak uděláme `let objekt = new třída(proměnné)` a musíme použít klíčové slovo `new`.
+
+```js
+class clovek{ //založení třídy clovek
+constructor(vek, jmeno){ //konstruktor třídy člověk co přijímá proměnné věk a jméno
+    this.vek = vek //nastavení tomuto objektu věk
+    this.jmeno = jmeno
+  }
+
+  pozdrav(){ //metody, která pozdraví podle jména objektu
+    console.log("ahoj", this.jmeno)
+  }
+}
+
+let osoba = new clovek(19, "Pavel") //založení objektu třídy s parametry co jsme zadali
+osoba.pozdrav() // pozdraví podle jména objektu
+console.log(osoba.vek) //vypíše proměnnou věk objektu
+```
+
+# čtyři hlavní pilíře OOP
+
+1. Encapsulation (Zapouzdření)
+2. Abstraction (Abstrakce)
+3. Inheritance (Dědičnost)
+4. Polymorphism (Polymorfizmus)
+
+## Encapsulation (Zapouzdření)
+
+Zapouzdření je jeden ze čtyř pilířů OOP. Znamená to zabalení dat a metod do jednoho objektu (jednotky) a kontrolu dat uvnitř. Závisí na `privátních` (soukromých) a `public` (veřejných) datech / proměnných. V třídách (`class`) se používá `#` pro udělání soukromé proměnné, pokud se pokusíme použít proměnnou co je soukromá bez toho aby nám to vrátila nějaká metoda, tak dostaneme `undefined` zpátky. Používá se k tomu `getter` a `setter`, často se používá něco jako `getName` a `setName`. 
+
+```js
+class clovek{ //založení třídy clovek
+  #vek //udělání privátní vek
+  #jmeno //udělání privátní jmeno
+  constructor(vek, jmeno){ //konstruktor co nám udělá privátní vlastnosti objektu vek a jmeno
+    this.#vek = vek
+    this.#jmeno = jmeno
+  }
+
+  getJmeno(){ //metoda co vrací privátní vlastnost objektu jmeno
+    return this.#jmeno   
+  }
+}
+
+let osoba = new clovek(19, "Pavel") //založení objektu
+console.log(osoba.jmeno) //vrací undefined, protože jmeno je soukromé
+console.log(osoba.getJmeno()) //vypíše jméno, tady "Pavel"
+```
+
+## Abstraction (Abstrakce)
+
+Abstrakce je určená k "schování" složité implementace nějaké metody, např. tím že zavoláme jednu metodu, která zavolá jiné aby udělala složitější věc. Více než teoretické vysvětlení k tomu podle mě nejde přidat.
+
+## Inheritance (Dědičnost)
+
+Dědičnost je určená k tomu abychom nemuseli opakovat kód, můžeme díky ní udělat objekt z více tříd najednou, dědí se metody a vlastnosti ze tříd. V JS se dědí pomocí klíčového slova `extends`. V konstruktoru se používá funkce `super()` s parametry co přijímá ta třída z které dědíme abychom spustili ten konstruktor rodičovské třídy.  
+
+```js
+class clovek{ //základní třída clovek
+    constructor(jmeno, vek){
+        this.vek = vek;
+        this.jmeno = jmeno;
+    }
+    
+    pozdrav(){
+        console.log(`zdraví tě`, this.jmeno)
+    }
+}
+
+class student extends clovek{ //třída student, která dědí z třídy člověk
+    constructor(jmeno, vek, skola){
+        super(jmeno, vek); //spuštění konstruktoru třídy ze které dědíme (clovek)
+        this.skola = skola;
+    }
+    
+    jakaSkola(){ //základní metoda, která vypíše nějaké data
+        console.log("jsem", this.jmeno, "a studuji na", this.skola)
+    }
+}
+
+let p = new student("pepa", 17, "škola") //založení objektu třídy student
+p.pozdrav() //použití funkce ze třídy "clovek"
+p.jakaSkola() //použití funkce ze třídy "student"
+```
+
+## Polymorphism (Polymorfizmus)
+
+Polymorfizmus znamená mnoho podob (z řečtiny, poly = mnoho, morphé = tvar). V OOP to znamená že můžeme mít název metody stejný ve více třídách a neudělá to chybu jako u funkcí.
+
+```js
+class clovek{ // třída člověk
+  getJmeno(){ //funkce getJmeno()
+    return this.jmeno //vrací jméno objektu
+  }
+}
+
+class student{
+  getJmeno(){
+    return this.jmeno
+  }
+}
+
+//kód funguje, protože metody mají stejný název jiných třídách a proto je to v pohodě
 ```
