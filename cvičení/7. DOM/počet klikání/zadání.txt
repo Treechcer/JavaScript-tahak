@@ -1,0 +1,1 @@
+Udělej "hru" kde při každém kliknutí na tlačítko se přičte +1 a vypíše se do nějakého textu na stránce

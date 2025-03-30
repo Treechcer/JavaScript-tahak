@@ -77,6 +77,8 @@
   - [Začátek OOP](#začátek-oop)
   - [vytváření objektů (bez tříd)](#vytváření-objektů-bez-tříd)
   - [vytváření objektů (s třídami)](#vytváření-objektů-s-třídami)
+  - [metody](#metody)
+  - [statické metody](#statické-metody)
 - [čtyři hlavní pilíře OOP](#čtyři-hlavní-pilíře-oop)
   - [Encapsulation (Zapouzdření)](#encapsulation-zapouzdření)
   - [Abstraction (Abstrakce)](#abstraction-abstrakce)
@@ -1188,6 +1190,44 @@ constructor(vek, jmeno){ //konstruktor třídy člověk co přijímá proměnné
 let osoba = new clovek(19, "Pavel") //založení objektu třídy s parametry co jsme zadali
 osoba.pozdrav() // pozdraví podle jména objektu
 console.log(osoba.vek) //vypíše proměnnou věk objektu
+```
+
+## metody
+
+Metody jsou jako funkce ale pro tu třídu nebo objekt. 
+
+```js
+class clovek{
+  metoda1(){ //metoda nepřijímající vstupy
+    //nějaký kód
+  }
+    metoda2(vstup1){ //metoda přijímající jeden vstup
+    //nějaký kód
+  }
+    metoda3(vstup1, vstup2){ //metoda přijímající více vstupů
+    //nějaký kód
+  }
+}
+```
+
+## statické metody
+
+Statické metody se definují stejně jako normální metody ale je před nimi klíčové slovo `static`. Statické metody jsou metody, které patří třídě a ne objektu, takže nemodifikují objekt ale dělají nějaké výpočty nebo tak, jsou jako funkce ale v "balíčku" třídy. Ty metody se pak volají jako: `názevTřídy.statickáMetoda(vstup/y)`
+
+```js
+class clovek{
+  static metoda(){ //statická metoda co nepřijímá vstup
+    //kód
+  }
+
+  static metoda1(vstup1){ //statická metoda co přijímá vstup
+    //nějaký kód
+  }
+
+  static metoda2(vstup1, vstup2){ //statická metoda co přijímá více vstupů
+
+  }
+}
 ```
 
 # čtyři hlavní pilíře OOP

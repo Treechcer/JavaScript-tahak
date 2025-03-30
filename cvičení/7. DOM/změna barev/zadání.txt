@@ -1,0 +1,4 @@
+udělej text / tlačítko, který začne jako černé barvy a po každé co na něho klikneme tak se změní na jinou barvu
+
+změní se jako:
+černá -> červená -> zelená -> modrá -> černá

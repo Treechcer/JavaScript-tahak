@@ -1,0 +1,1 @@
+udělej třídu osoba a z ní dědí studen, přidej jim základní metody a vlastnosti

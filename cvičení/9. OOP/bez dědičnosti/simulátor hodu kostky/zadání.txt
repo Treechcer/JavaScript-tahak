@@ -1,0 +1,5 @@
+Udělej třídu, která umožní ti "hodit kostkou"
+
+pozn. k tomuto je potřeba Math.random a Math.floor nebo Math.ceil. Math.random
+vrací číslo meti 0 až 1, Math.floor je zaokrouhlení dolů a Math.ceil
+zaokrouhlení nahoru 

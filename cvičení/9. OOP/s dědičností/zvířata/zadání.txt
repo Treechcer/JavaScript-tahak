@@ -1,0 +1,5 @@
+udělej kolekci zvířat co dědí z hlavní třídy "zvířata", každé
+zvíře může zavola metodu, která vyvolá jejich zvuk co dělají, jaké
+zvířata tam dáš je na tobě. Každé zvíře má jméno a může ho vypsat.
+
+k tomuto nemusíš využívat HTML

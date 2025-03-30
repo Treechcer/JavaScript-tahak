@@ -1,0 +1,3 @@
+udelěj regEx, který bude kontrovat vstup jestli by mohl být email a pak vypíše jestli je to možný email nebo ne
+
+//pozn kontrola emailu aby byl 100% použitelný takže kontrolujeme jenom jestli by to mohl být email

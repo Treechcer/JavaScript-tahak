@@ -1,0 +1,6 @@
+udělej třídu, která bude fungovat jako kalkulačka, uživate si vybere zda chce
+sčítat, odečítat, násobit nebo dělit (klidně přidej více) s tím že to celé
+se dělá pomocí třídy
+
+/*pozn. je dobré tady využít statické metody ale není 
+to nutné, já je v řešení používám*/

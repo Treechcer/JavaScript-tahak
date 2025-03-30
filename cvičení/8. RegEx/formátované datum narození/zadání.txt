@@ -1,0 +1,8 @@
+udělej regEx, který bude kontrovat jestli zadaný vstup je 
+možné datum narození a vypíše to jestli je to dobrý nebo 
+špatný vstup
+
+/*pozn: neřešíme jestli přejde délku měsíce, dnů v měsíci atd. 
+protože by to bylo složité až moct, řešíme jenom jestli je to 
+datum ve formátu: 00-99.00-99. 1000 - 9999
+*/
