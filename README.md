@@ -10,7 +10,7 @@
 - [x] RegEx (regulární exprese)
 - [x] vysvětlení OOP
 - [x] základy OOP
-- [ ] pokročilejší OOP
+- [x] pokročilejší OOP
 - [ ] mít příklady ke všemu
 - [ ] a více
   
