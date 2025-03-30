@@ -11,7 +11,7 @@
 - [x] vysvětlení OOP
 - [x] základy OOP
 - [x] pokročilejší OOP
-- [ ] mít příklady ke všemu
+- [x] mít příklady ke všemu
   
 ## Obsah
 
