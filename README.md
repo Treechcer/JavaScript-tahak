@@ -7,7 +7,7 @@
 - [x] funkce
 - [x] cykly
 - [x] DOM (Document Object Model)
-- [ ] RegEx (regulární exprese)
+- [x] RegEx (regulární exprese)
 - [x] vysvětlení OOP
 - [x] základy OOP
 - [ ] pokročilejší OOP
