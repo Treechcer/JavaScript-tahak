@@ -1088,6 +1088,19 @@ Speciální znaky nám umožňují vyhledávat speciální sekvence znaků, mů�
 |\b|hranice slova|`/\bkat\b/` -> `"kat"` == `true`, `"kategorie"` == `false`|
 |\B|nehranice slova|`/\bkat\b/` -> `"kategorie"` == `true`, `"kat"` == `false`|
 
+## rozsahy znaků
+
+rozsah znaklů se píše vždy do hranatých závorek (`[]`), vyhledává mezi určitými znaky.
+
+|znak|význam|příklad*y|
+|:---|:---|:---|
+|[abc]|znaky mezi a, b a c|`"a"` == true `"b"` == true `"c"` == true `"d"` == false|
+|[a-c]|znaky mezi a, b a c ale pomocí intervalu|`"a"` == true `"b"` == true `"c"` == true `"d"` == false|
+|[a-z]|libovolné znaky mezi `a` až `z` (všechny malé písmena)|`"a"` == true `"A"` == false|
+|[A-Z]|libovolné znaky mezi `A` až `Z` (všechny velké písmena)|`"A"` == true `"a"` == false|
+|[0-9]|libovolné čísla mezi `0` až `9` (všechna písmena)|`1` == true `"b"` == false|
+|[a-zA-Z]|libovolné písmeno mezi `a` až `Z` (všechna písmena|`"a"` == true `"A"` == true `1` == false|
+
 # OOP (Objektově Orientované Programování)
 
 Objektově orientované programování (`OOP`) je programovací paradigma, které využívá `objekty`, `třídy`, `metody` apod. s objekty jsme se už setkali v dávnější kapitole o Cyklech s cyklem `for...in` ale to není všechno, většina proměnných je v JS je objekt nějaké třídy, například objekty typu `Object`, `Array`, `Function`, ale primitivní datové typy jako čísla nebo řetězce jsou zvláštní hodnoty, které nepatří přímo mezi objekty (primitivní datové typy). Každá třídu může mít pod sebou i metody (např. třída `console` a její metoda `log`, která přijímá nějaký string, co má vytisknout). V JS jsou dva hlavní způsoby jak si udělat objekt, jeden je pomocí `třídy` a `konstruktorů` a druhá je pomocí `deklarování` (založení) proměnné, která obsahuje nějaké `vlastnosti` a jejich `atributy` (k nim za chvíli).
