@@ -72,6 +72,7 @@
   - [shrnutí metod pro RegEx](#shrnutí-metod-pro-regex)
   - [Speciální znaky pro RegEx](#speciální-znaky-pro-regex)
   - [pokročilé regEx znaky](#pokročilé-regex-znaky)
+  - [rozsahy znaků](#rozsahy-znaků)
 - [OOP (Objektově Orientované Programování)](#oop-objektově-orientované-programování)
   - [Začátek OOP](#začátek-oop)
   - [vytváření objektů (bez tříd)](#vytváření-objektů-bez-tříd)
@@ -1090,7 +1091,7 @@ Speciální znaky nám umožňují vyhledávat speciální sekvence znaků, mů�
 
 ## rozsahy znaků
 
-rozsah znaklů se píše vždy do hranatých závorek (`[]`), vyhledává mezi určitými znaky.
+rozsah znaků se píše vždy do hranatých závorek (`[]`), vyhledává mezi určitými znaky.
 
 |znak|význam|příklad*y|
 |:---|:---|:---|
