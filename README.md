@@ -1328,3 +1328,4 @@ class student{
 
 //kód funguje, protože metody mají stejný název jiných třídách a proto je to v pohodě
 ```
+ 
